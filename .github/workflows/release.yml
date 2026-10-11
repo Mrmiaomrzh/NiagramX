@@ -126,7 +126,7 @@ jobs:
         uses: actions/upload-artifact@v7
         with:
           name: Release-${{ matrix.target }}
-          path: TMessagesProj/build/outputs/apk/release/*-${{ matrix.target }}.apk
+          path: TMessagesProj/build/outputs/apk/release/*${{ matrix.target }}*.apk
 
   upload:
     name: Upload release
