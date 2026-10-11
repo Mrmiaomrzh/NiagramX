@@ -24,7 +24,7 @@ import org.telegram.ui.ActionBar.Theme;
 import org.telegram.ui.Components.ChatAttachAlertPhotoLayout;
 import org.telegram.ui.Components.LayoutHelper;
 
-import top.nkbe.niagram.NekoXConfig;
+import io.neko.niagramx.NekoXConfig;
 
 public class PhotoAttachPermissionCell extends FrameLayout {
 

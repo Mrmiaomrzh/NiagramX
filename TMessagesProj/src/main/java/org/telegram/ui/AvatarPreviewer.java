@@ -66,8 +66,8 @@ import org.telegram.ui.Components.chat.ViewPositionWatcher;
 import java.util.Objects;
 
 import kotlin.Unit;
-import top.nkbe.niagram.ui.BottomBuilder;
-import top.nkbe.niagram.config.NyaConfig;
+import io.neko.niagramx.ui.BottomBuilder;
+import io.neko.niagramx.config.NyaConfig;
 
 public class AvatarPreviewer {
 

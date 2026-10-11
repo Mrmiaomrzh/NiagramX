@@ -47,7 +47,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Random;
 
-import top.nkbe.niagram.config.NyaConfig;
+import io.neko.niagramx.config.NyaConfig;
 
 public class EmojiAnimationsOverlay implements NotificationCenter.NotificationCenterDelegate {
 

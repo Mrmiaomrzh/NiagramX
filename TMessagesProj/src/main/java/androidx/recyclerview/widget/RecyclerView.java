@@ -97,8 +97,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import top.nkbe.niagram.config.NyaConfig;
-import top.nkbe.niagram.utils.AndroidUtil;
+import io.neko.niagramx.config.NyaConfig;
+import io.neko.niagramx.utils.AndroidUtil;
 
 /**
  * A flexible view for providing a limited window into a large data set.

@@ -140,8 +140,8 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicReference;
 
-import top.nkbe.niagram.helpers.MessageHelper;
-import top.nkbe.niagram.config.NyaConfig;
+import io.neko.niagramx.helpers.MessageHelper;
+import io.neko.niagramx.config.NyaConfig;
 import xyz.nextalone.nagram.helper.ForwardTextEdit;
 
 public class ShareAlert extends BottomSheet implements NotificationCenter.NotificationCenterDelegate {

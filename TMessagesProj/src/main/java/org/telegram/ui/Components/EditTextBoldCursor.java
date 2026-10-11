@@ -541,7 +541,7 @@ public class EditTextBoldCursor extends EditTextEffects {
     @Override
     public void setTextSize(int unit, float size) {
         try {
-            int customSize = top.nkbe.niagram.config.NyaConfig.INSTANCE.getInputFieldTextSize().Int();
+            int customSize = io.neko.niagramx.config.NyaConfig.INSTANCE.getInputFieldTextSize().Int();
             if (customSize > 0) {
                 size = customSize;
                 unit = android.util.TypedValue.COMPLEX_UNIT_DIP;

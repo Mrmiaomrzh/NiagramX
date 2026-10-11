@@ -56,9 +56,9 @@ import org.telegram.ui.Stories.recorder.HintView2;
 import java.util.ArrayList;
 import java.util.List;
 
-import top.nkbe.niagram.config.NyaConfig;
-import top.nkbe.niagram.NekoXConfig;
-import top.nkbe.niagram.translate.Translator;
+import io.neko.niagramx.config.NyaConfig;
+import io.neko.niagramx.NekoXConfig;
+import io.neko.niagramx.translate.Translator;
 
 public class TranslateButton extends FrameLayout implements Theme.Colorable {
 

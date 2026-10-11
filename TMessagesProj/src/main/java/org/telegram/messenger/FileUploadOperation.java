@@ -26,7 +26,7 @@ import java.io.RandomAccessFile;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 
-import top.nkbe.niagram.config.NyaConfig;
+import io.neko.niagramx.config.NyaConfig;
 
 public class FileUploadOperation {
 

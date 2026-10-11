@@ -71,7 +71,7 @@ import java.util.Calendar;
 import java.util.Collections;
 import java.util.Objects;
 
-import top.nkbe.niagram.helpers.PasscodeHelper;
+import io.neko.niagramx.helpers.PasscodeHelper;
 
 public class UserInfoActivity extends UniversalFragment implements NotificationCenter.NotificationCenterDelegate {
 

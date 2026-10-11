@@ -151,14 +151,14 @@ import java.util.Set;
 
 import me.vkryl.android.animator.BoolAnimator;
 import me.vkryl.android.animator.FactorAnimator;
-import top.nkbe.niagram.helpers.MainTabsHelper;
-import top.nkbe.niagram.helpers.MonetHelper;
-import top.nkbe.niagram.helpers.PasscodeHelper;
-import top.nkbe.niagram.helpers.remote.UpdateHelper;
-import top.nkbe.niagram.settings.NekoSettingsActivity;
-import top.nkbe.niagram.ui.BottomBuilder;
-import top.nkbe.niagram.utils.AndroidUtil;
-import top.nkbe.niagram.config.NyaConfig;
+import io.neko.niagramx.helpers.MainTabsHelper;
+import io.neko.niagramx.helpers.MonetHelper;
+import io.neko.niagramx.helpers.PasscodeHelper;
+import io.neko.niagramx.helpers.remote.UpdateHelper;
+import io.neko.niagramx.settings.NekoSettingsActivity;
+import io.neko.niagramx.ui.BottomBuilder;
+import io.neko.niagramx.utils.AndroidUtil;
+import io.neko.niagramx.config.NyaConfig;
 
 import kotlin.Unit;
 

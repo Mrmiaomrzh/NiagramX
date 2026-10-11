@@ -44,8 +44,8 @@ import org.telegram.ui.Cells.BaseCell;
 
 import me.vkryl.android.animator.BoolAnimator;
 
-import top.nkbe.niagram.helpers.MonetHelper;
-import top.nkbe.niagram.config.NyaConfig;
+import io.neko.niagramx.helpers.MonetHelper;
+import io.neko.niagramx.config.NyaConfig;
 
 public class Switch extends View {
     private final BoolAnimator animatorIconVisibility = new BoolAnimator(this, CubicBezierInterpolator.EASE_OUT_QUINT, 380L, true);

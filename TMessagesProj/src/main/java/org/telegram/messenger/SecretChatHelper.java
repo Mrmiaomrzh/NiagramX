@@ -35,8 +35,8 @@ import java.util.Collections;
 import java.util.Locale;
 import java.util.concurrent.ConcurrentHashMap;
 
-import top.nkbe.niagram.utils.AlertUtil;
-import top.nkbe.niagram.config.NyaConfig;
+import io.neko.niagramx.utils.AlertUtil;
+import io.neko.niagramx.config.NyaConfig;
 import com.radolyn.ayugram.AyuConstants;
 import com.radolyn.ayugram.messages.AyuMessagesController;
 import com.radolyn.ayugram.messages.AyuSavePreferences;

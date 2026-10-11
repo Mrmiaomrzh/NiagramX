@@ -292,8 +292,8 @@ public class Browser {
         if (context == null || uri == null) {
             return;
         }
-        if (top.nkbe.niagram.config.NyaConfig.INSTANCE.getCleanTrackingParams().Bool()) {
-            uri = top.nkbe.niagram.utils.UrlCleaner.clean(uri);
+        if (io.neko.niagramx.config.NyaConfig.INSTANCE.getCleanTrackingParams().Bool()) {
+            uri = io.neko.niagramx.utils.UrlCleaner.clean(uri);
         }
         final int currentAccount = UserConfig.selectedAccount;
         boolean[] forceBrowser = new boolean[]{false};

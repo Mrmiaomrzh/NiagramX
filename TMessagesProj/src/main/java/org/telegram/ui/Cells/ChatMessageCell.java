@@ -263,15 +263,15 @@ import me.vkryl.android.animator.BoolAnimator;
 import me.vkryl.android.animator.FactorAnimator;
 import me.vkryl.core.BitwiseUtils;
 
-import top.nkbe.niagram.filters.ReactionFilter;
-import top.nkbe.niagram.helpers.MessageHelper;
-import top.nkbe.niagram.helpers.TimeStringHelper;
-import top.nkbe.niagram.helpers.TranscribeHelper;
-import top.nkbe.niagram.utils.AndroidUtil;
-import top.nkbe.niagram.config.NyaConfig;
+import io.neko.niagramx.filters.ReactionFilter;
+import io.neko.niagramx.helpers.MessageHelper;
+import io.neko.niagramx.helpers.TimeStringHelper;
+import io.neko.niagramx.helpers.TranscribeHelper;
+import io.neko.niagramx.utils.AndroidUtil;
+import io.neko.niagramx.config.NyaConfig;
 import xyz.nextalone.nagram.helper.BookmarksHelper;
 
-import static top.nkbe.niagram.helpers.MessageHelper.showForwardDate;
+import static io.neko.niagramx.helpers.MessageHelper.showForwardDate;
 
 public class ChatMessageCell extends BaseCell implements SeekBar.SeekBarDelegate, ImageReceiver.ImageReceiverDelegate,
         DownloadController.FileDownloadProgressListener, TextSelectionHelper.SelectableView,

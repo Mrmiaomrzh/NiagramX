@@ -37,7 +37,7 @@ import org.telegram.ui.PremiumPreviewFragment;
 
 import java.util.Locale;
 
-import top.nkbe.niagram.config.NyaConfig;
+import io.neko.niagramx.config.NyaConfig;
 
 public class StealthModeAlert extends BottomSheet {
 

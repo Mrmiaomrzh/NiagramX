@@ -111,7 +111,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-import top.nkbe.niagram.config.NyaConfig;
+import io.neko.niagramx.config.NyaConfig;
 
 @SuppressLint("NewApi")
 @OptIn(markerClass = UnstableApi.class)

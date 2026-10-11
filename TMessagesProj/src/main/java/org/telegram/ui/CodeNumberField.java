@@ -238,7 +238,7 @@ public class CodeNumberField extends EditTextBoldCursor {
     }
 
     public boolean usesSharedInputAnimation() {
-        return top.nkbe.niagram.config.NyaConfig.INSTANCE.getInputTextAnimations().Bool()
+        return io.neko.niagramx.config.NyaConfig.INSTANCE.getInputTextAnimations().Bool()
                 && (getTransformationMethod() == null
                 || getTransformationMethod() instanceof android.text.method.SingleLineTransformationMethod);
     }

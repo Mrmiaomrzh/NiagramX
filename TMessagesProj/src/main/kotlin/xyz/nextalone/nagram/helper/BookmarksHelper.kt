@@ -2,7 +2,7 @@ package xyz.nextalone.nagram.helper
 
 import androidx.core.content.edit
 import org.telegram.messenger.UserConfig
-import top.nkbe.niagram.config.NyaConfig
+import io.neko.niagramx.config.NyaConfig
 import xyz.nextalone.nagram.ToggleResult
 import java.util.concurrent.ConcurrentHashMap
 

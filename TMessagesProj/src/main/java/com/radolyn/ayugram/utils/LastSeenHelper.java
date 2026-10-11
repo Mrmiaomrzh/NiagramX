@@ -14,7 +14,7 @@ import org.telegram.ui.ChatActivity;
 import java.util.ArrayList;
 import java.util.List;
 
-import top.nkbe.niagram.config.NyaConfig;
+import io.neko.niagramx.config.NyaConfig;
 
 public class LastSeenHelper {
     private static final int FLUSH_DELAY_MS = 5000;

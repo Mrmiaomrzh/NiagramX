@@ -21402,11 +21402,11 @@ public class TLRPC {
         public int fromMessageId; //custom
 
         public boolean verifiedExtended() {
-            return top.nkbe.niagram.helpers.NiagramVerifiedHelper.isVerified(this);
+            return io.neko.niagramx.helpers.NiagramVerifiedHelper.isVerified(this);
         }
 
         public int getVerifiedType() {
-            return top.nkbe.niagram.helpers.NiagramVerifiedHelper.getUserVerifiedType(this);
+            return io.neko.niagramx.helpers.NiagramVerifiedHelper.getUserVerifiedType(this);
         }
 
         public static User TLdeserialize(InputSerializedData stream, int constructor, boolean exception) {
@@ -38892,11 +38892,11 @@ public class TLRPC {
         public ArrayList<TL_username> usernames = new ArrayList<>();
 
         public boolean verifiedExtended() {
-            return top.nkbe.niagram.helpers.NiagramVerifiedHelper.isVerified(this);
+            return io.neko.niagramx.helpers.NiagramVerifiedHelper.isVerified(this);
         }
 
         public int getVerifiedType() {
-            return top.nkbe.niagram.helpers.NiagramVerifiedHelper.getChatVerifiedType(this);
+            return io.neko.niagramx.helpers.NiagramVerifiedHelper.getChatVerifiedType(this);
         }
 
         public static Chat TLdeserialize(InputSerializedData stream, int constructor, boolean exception) {

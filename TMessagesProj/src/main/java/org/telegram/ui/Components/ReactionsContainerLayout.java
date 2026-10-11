@@ -91,8 +91,8 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
-import top.nkbe.niagram.helpers.PinnedElementsHelper;
-import top.nkbe.niagram.config.NyaConfig;
+import io.neko.niagramx.helpers.PinnedElementsHelper;
+import io.neko.niagramx.config.NyaConfig;
 
 public class ReactionsContainerLayout extends FrameLayout implements NotificationCenter.NotificationCenterDelegate {
 

@@ -111,8 +111,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import top.nkbe.niagram.helpers.EntitiesHelper;
-import top.nkbe.niagram.config.NyaConfig;
+import io.neko.niagramx.helpers.EntitiesHelper;
+import io.neko.niagramx.config.NyaConfig;
 
 @SuppressWarnings("unchecked")
 public class MediaDataController extends BaseController {

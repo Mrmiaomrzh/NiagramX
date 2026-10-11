@@ -60,9 +60,9 @@ import java.io.File;
 import java.util.Locale;
 import java.util.concurrent.CountDownLatch;
 
-import top.nkbe.niagram.utils.AndroidUtil;
-import top.nkbe.niagram.config.NyaConfig;
-import top.nkbe.niagram.utils.ProxyUtil;
+import io.neko.niagramx.utils.AndroidUtil;
+import io.neko.niagramx.config.NyaConfig;
+import io.neko.niagramx.utils.ProxyUtil;
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.crashlytics.FirebaseCrashlytics;
 

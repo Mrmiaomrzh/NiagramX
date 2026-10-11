@@ -37,7 +37,7 @@ import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
 
-import top.nkbe.niagram.filters.ReactionFilter;
+import io.neko.niagramx.filters.ReactionFilter;
 
 public class ReactedUsersListView extends FrameLayout {
 

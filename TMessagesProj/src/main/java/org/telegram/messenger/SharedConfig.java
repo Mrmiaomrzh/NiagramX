@@ -45,7 +45,7 @@ import org.telegram.ui.Components.AudioPlayerAlert;
 import org.telegram.ui.Components.SwipeGestureSettingsView;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.ui.LaunchActivity;
-import top.nkbe.niagram.helpers.WebSocketHelper;
+import io.neko.niagramx.helpers.WebSocketHelper;
 
 import java.io.File;
 import java.io.RandomAccessFile;
@@ -65,7 +65,7 @@ import java.util.LinkedList;
 import java.util.concurrent.CopyOnWriteArraySet;
 import java.util.stream.Collectors;
 
-import top.nkbe.niagram.config.NyaConfig;
+import io.neko.niagramx.config.NyaConfig;
 
 import java.util.List;
 import java.util.Locale;

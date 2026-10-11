@@ -148,11 +148,11 @@ import java.util.Stack;
 
 import me.vkryl.android.animator.BoolAnimator;
 
-import top.nkbe.niagram.filters.AyuFilter;
-import top.nkbe.niagram.filters.ReactionFilter;
-import top.nkbe.niagram.helpers.MessageHelper;
-import top.nkbe.niagram.utils.AndroidUtil;
-import top.nkbe.niagram.config.NyaConfig;
+import io.neko.niagramx.filters.AyuFilter;
+import io.neko.niagramx.filters.ReactionFilter;
+import io.neko.niagramx.helpers.MessageHelper;
+import io.neko.niagramx.utils.AndroidUtil;
+import io.neko.niagramx.config.NyaConfig;
 
 public class DialogCell extends BaseCell implements StoriesListPlaceProvider.AvatarOverlaysView, Theme.Colorable {
 
@@ -4586,7 +4586,7 @@ public class DialogCell extends BaseCell implements StoriesListPlaceProvider.Ava
                 }
                 setDrawableBounds(Theme.dialogs_verifiedDrawable, nameMuteLeft - dp(1), y);
                 setDrawableBounds(Theme.dialogs_verifiedCheckDrawable, nameMuteLeft - dp(1), y);
-                int customVerifiedColor = top.nkbe.niagram.helpers.NiagramVerifiedHelper.INSTANCE.getBadgeBackgroundColor(verifiedType, 0);
+                int customVerifiedColor = io.neko.niagramx.helpers.NiagramVerifiedHelper.INSTANCE.getBadgeBackgroundColor(verifiedType, 0);
                 if (customVerifiedColor != 0) {
                     Theme.setDrawableColor(Theme.dialogs_verifiedDrawable, customVerifiedColor);
                 }
@@ -6003,7 +6003,7 @@ public class DialogCell extends BaseCell implements StoriesListPlaceProvider.Ava
 
     public SpannableStringBuilder getMessageStringFormatted(int messageFormatType, String restrictionReason, CharSequence messageNameString, boolean applyThumbs) {
         SpannableStringBuilder stringBuilder;
-        if (top.nkbe.niagram.helpers.ChatLockManager.isChatLocked(currentAccount, currentDialogId)) {
+        if (io.neko.niagramx.helpers.ChatLockManager.isChatLocked(currentAccount, currentDialogId)) {
             applyName = false;
             return SpannableStringBuilder.valueOf("🔒 " + LocaleController.getString(R.string.ChatLockedMessage));
         }

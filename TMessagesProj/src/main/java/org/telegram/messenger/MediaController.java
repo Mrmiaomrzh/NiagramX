@@ -139,9 +139,9 @@ import java.util.TimerTask;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CountDownLatch;
 
-import top.nkbe.niagram.SaveToDownloadReceiver;
-import top.nkbe.niagram.helpers.ChatsHelper;
-import top.nkbe.niagram.config.NyaConfig;
+import io.neko.niagramx.SaveToDownloadReceiver;
+import io.neko.niagramx.helpers.ChatsHelper;
+import io.neko.niagramx.config.NyaConfig;
 import xyz.nextalone.nagram.helper.AudioEnhance;
 
 @OptIn(markerClass = UnstableApi.class)

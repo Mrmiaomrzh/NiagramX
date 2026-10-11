@@ -36,8 +36,8 @@ import org.telegram.ui.ActionBar.Theme;
 
 import java.io.File;
 
-import top.nkbe.niagram.TextViewEffects;
-import top.nkbe.niagram.helpers.remote.ApkDownloader;
+import io.neko.niagramx.TextViewEffects;
+import io.neko.niagramx.helpers.remote.ApkDownloader;
 
 public class UpdateAppAlertDialog extends BottomSheet {
 

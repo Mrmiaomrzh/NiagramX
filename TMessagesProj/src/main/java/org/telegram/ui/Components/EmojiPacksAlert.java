@@ -85,8 +85,8 @@ import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import top.nkbe.niagram.config.NyaConfig;
-import top.nkbe.niagram.utils.ProxyUtil;
+import io.neko.niagramx.config.NyaConfig;
+import io.neko.niagramx.utils.ProxyUtil;
 
 public class EmojiPacksAlert extends BottomSheet implements NotificationCenter.NotificationCenterDelegate {
 

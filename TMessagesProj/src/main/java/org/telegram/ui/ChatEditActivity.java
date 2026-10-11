@@ -120,9 +120,9 @@ import java.util.List;
 import java.util.Locale;
 import java.util.concurrent.CountDownLatch;
 
-import top.nkbe.niagram.config.NyaConfig;
-import top.nkbe.niagram.helpers.LocalNameHelper;
-import top.nkbe.niagram.utils.AndroidUtil;
+import io.neko.niagramx.config.NyaConfig;
+import io.neko.niagramx.helpers.LocalNameHelper;
+import io.neko.niagramx.utils.AndroidUtil;
 
 public class ChatEditActivity extends BaseFragment implements ImageUpdater.ImageUpdaterDelegate, NotificationCenter.NotificationCenterDelegate {
 

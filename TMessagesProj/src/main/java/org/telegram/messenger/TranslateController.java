@@ -53,11 +53,11 @@ import java.util.Locale;
 import java.util.Objects;
 import java.util.Set;
 
-import top.nkbe.niagram.helpers.MessageHelper;
-import top.nkbe.niagram.translate.Translator;
-import top.nkbe.niagram.translate.TranslatorKt;
-import top.nkbe.niagram.translate.source.LLMTranslator;
-import top.nkbe.niagram.config.NyaConfig;
+import io.neko.niagramx.helpers.MessageHelper;
+import io.neko.niagramx.translate.Translator;
+import io.neko.niagramx.translate.TranslatorKt;
+import io.neko.niagramx.translate.source.LLMTranslator;
+import io.neko.niagramx.config.NyaConfig;
 
 public class TranslateController extends BaseController {
 

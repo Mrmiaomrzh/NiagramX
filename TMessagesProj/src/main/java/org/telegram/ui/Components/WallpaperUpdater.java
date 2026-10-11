@@ -39,7 +39,7 @@ import java.io.FileOutputStream;
 import java.util.ArrayList;
 
 import kotlin.Unit;
-import top.nkbe.niagram.ui.BottomBuilder;
+import io.neko.niagramx.ui.BottomBuilder;
 
 public class WallpaperUpdater {
 

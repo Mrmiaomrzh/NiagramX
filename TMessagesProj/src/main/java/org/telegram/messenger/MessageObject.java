@@ -127,10 +127,10 @@ import java.util.regex.Pattern;
 
 import me.vkryl.core.BitwiseUtils;
 
-import top.nkbe.niagram.filters.ReactionFilter;
-import top.nkbe.niagram.config.NyaConfig;
-import top.nkbe.niagram.helpers.MessageHelper;
-import top.nkbe.niagram.syntaxhighlight.SyntaxHighlight;
+import io.neko.niagramx.filters.ReactionFilter;
+import io.neko.niagramx.config.NyaConfig;
+import io.neko.niagramx.helpers.MessageHelper;
+import io.neko.niagramx.syntaxhighlight.SyntaxHighlight;
 
 public class MessageObject {
     private static final int MESSAGE_ID_RESERVED_BITS_MASK = 0x70000000;

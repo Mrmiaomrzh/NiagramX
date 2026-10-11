@@ -389,7 +389,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.DEFAULT"/>
-                <data android:mimeType="vnd.android.cursor.item/vnd.top.nkbe.niagram.android.profile"/>
+                <data android:mimeType="vnd.android.cursor.item/vnd.io.neko.niagramx.android.profile"/>
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
@@ -436,8 +436,8 @@
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.DEFAULT"/>
-                <data android:mimeType="vnd.android.cursor.item/vnd.top.nkbe.niagram.android.call"/>
-                <data android:mimeType="vnd.android.cursor.item/vnd.top.nkbe.niagram.android.call.video"/>
+                <data android:mimeType="vnd.android.cursor.item/vnd.io.neko.niagramx.android.call"/>
+                <data android:mimeType="vnd.android.cursor.item/vnd.io.neko.niagramx.android.call.video"/>
             </intent-filter>
         </activity-alias>
         <activity
@@ -535,7 +535,7 @@
             android:excludeFromRecents="true"
             android:theme="@style/Theme.TMessages.TransparentWithAlerts"/>
         <activity
-            android:name="top.nkbe.niagram.helpers.AppRestartHelper"
+            android:name="io.neko.niagramx.helpers.AppRestartHelper"
             android:theme="@android:style/Theme.Translucent.NoTitleBar"
             android:process=":niagramx"
             android:exported="false"
@@ -825,7 +825,7 @@
 
         <provider
             android:authorities="${applicationId}.streaming"
-            android:name="top.nkbe.niagram.streaming.MediaStreamingProvider"
+            android:name="io.neko.niagramx.streaming.MediaStreamingProvider"
             android:exported="false"
             android:grantUriPermissions="true"/>
 
@@ -837,7 +837,7 @@
             android:name="google_analytics_adid_collection_enabled"
             android:value="false" />
 
-        <receiver android:name="top.nkbe.niagram.SaveToDownloadReceiver" android:exported="false">
+        <receiver android:name="io.neko.niagramx.SaveToDownloadReceiver" android:exported="false">
             <intent-filter>
                 <action android:name="${applicationId}.CANCEL_SAVE_TO_DOWNLOAD" />
             </intent-filter>

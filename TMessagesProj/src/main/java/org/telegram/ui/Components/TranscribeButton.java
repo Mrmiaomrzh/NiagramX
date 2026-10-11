@@ -54,13 +54,13 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Objects;
 
-import top.nkbe.niagram.config.NyaConfig;
-import top.nkbe.niagram.helpers.MessageHelper;
-import top.nkbe.niagram.helpers.TranscribeHelper;
-import top.nkbe.niagram.llm.LlmConfig;
-import top.nkbe.niagram.translate.Translator;
-import top.nkbe.niagram.translate.TranslatorKt;
-import top.nkbe.niagram.utils.AndroidUtil;
+import io.neko.niagramx.config.NyaConfig;
+import io.neko.niagramx.helpers.MessageHelper;
+import io.neko.niagramx.helpers.TranscribeHelper;
+import io.neko.niagramx.llm.LlmConfig;
+import io.neko.niagramx.translate.Translator;
+import io.neko.niagramx.translate.TranslatorKt;
+import io.neko.niagramx.utils.AndroidUtil;
 
 public class TranscribeButton {
 

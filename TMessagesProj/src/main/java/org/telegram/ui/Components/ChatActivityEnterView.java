@@ -8,8 +8,8 @@
 
 package org.telegram.ui.Components;
 
-import static top.nkbe.niagram.helpers.MessageHelper.canSendAsDice;
-import static top.nkbe.niagram.helpers.MessageHelper.containsMarkdown;
+import static io.neko.niagramx.helpers.MessageHelper.canSendAsDice;
+import static io.neko.niagramx.helpers.MessageHelper.containsMarkdown;
 import static org.telegram.messenger.AndroidUtilities.dp;
 import static org.telegram.messenger.AndroidUtilities.dpf2;
 import static org.telegram.messenger.AndroidUtilities.lerp;
@@ -237,15 +237,15 @@ import java.util.Locale;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import kotlin.Unit;
-import top.nkbe.niagram.helpers.ChatsHelper;
-import top.nkbe.niagram.llm.LlmConfig;
-import top.nkbe.niagram.utils.AndroidUtil;
-import top.nkbe.niagram.utils.StringUtils;
-import top.nkbe.niagram.translate.Translator;
-import top.nkbe.niagram.translate.TranslatorKt;
-import top.nkbe.niagram.ui.BottomBuilder;
-import top.nkbe.niagram.utils.AlertUtil;
-import top.nkbe.niagram.config.NyaConfig;
+import io.neko.niagramx.helpers.ChatsHelper;
+import io.neko.niagramx.llm.LlmConfig;
+import io.neko.niagramx.utils.AndroidUtil;
+import io.neko.niagramx.utils.StringUtils;
+import io.neko.niagramx.translate.Translator;
+import io.neko.niagramx.translate.TranslatorKt;
+import io.neko.niagramx.ui.BottomBuilder;
+import io.neko.niagramx.utils.AlertUtil;
+import io.neko.niagramx.config.NyaConfig;
 
 import me.vkryl.android.animator.BoolAnimator;
 import me.vkryl.android.animator.FactorAnimator;
@@ -6571,11 +6571,11 @@ public class ChatActivityEnterView extends FrameLayout implements
 
     public void updateFieldTextSize() {
         if (messageEditText != null) {
-            int customSize = top.nkbe.niagram.config.NyaConfig.INSTANCE.getInputFieldTextSize().Int();
+            int customSize = io.neko.niagramx.config.NyaConfig.INSTANCE.getInputFieldTextSize().Int();
             float size = customSize > 0 ? customSize : SharedConfig.fontSize;
             messageEditText.setTextSize(TypedValue.COMPLEX_UNIT_DIP, size);
             messageEditText.setCursorSize(dp(size + 2));
-            android.graphics.Typeface regularTf = top.nkbe.niagram.helpers.TypefaceHelper.getRegularTypeface();
+            android.graphics.Typeface regularTf = io.neko.niagramx.helpers.TypefaceHelper.getRegularTypeface();
             if (regularTf != null) {
                 messageEditText.setTypeface(regularTf);
             }
@@ -6678,7 +6678,7 @@ public class ChatActivityEnterView extends FrameLayout implements
                 }
             }
         };
-        Typeface customRegular = top.nkbe.niagram.helpers.FontHelper.INSTANCE.getCustomTypeface(top.nkbe.niagram.helpers.FontHelper.CATEGORY_REGULAR);
+        Typeface customRegular = io.neko.niagramx.helpers.FontHelper.INSTANCE.getCustomTypeface(io.neko.niagramx.helpers.FontHelper.CATEGORY_REGULAR);
         if (customRegular != null) {
             messageEditText.setTypeface(customRegular);
         }

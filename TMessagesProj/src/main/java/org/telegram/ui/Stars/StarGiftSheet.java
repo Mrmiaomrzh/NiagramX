@@ -191,7 +191,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 
-import top.nkbe.niagram.config.NyaConfig;
+import io.neko.niagramx.config.NyaConfig;
 
 public class StarGiftSheet extends BottomSheetWithRecyclerListView implements NotificationCenter.NotificationCenterDelegate {
 

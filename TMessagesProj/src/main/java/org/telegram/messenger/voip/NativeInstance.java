@@ -11,7 +11,7 @@ import org.webrtc.VideoSink;
 import java.nio.ByteBuffer;
 import java.util.concurrent.CountDownLatch;
 
-import top.nkbe.niagram.config.NyaConfig;
+import io.neko.niagramx.config.NyaConfig;
 
 public class NativeInstance {
 

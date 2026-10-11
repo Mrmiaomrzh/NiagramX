@@ -101,9 +101,9 @@ import java.util.Objects;
 import me.vkryl.android.animator.BoolAnimator;
 import me.vkryl.android.animator.FactorAnimator;
 import me.vkryl.android.animator.ReplaceAnimator;
-import top.nkbe.niagram.config.NyaConfig;
-import top.nkbe.niagram.helpers.TypefaceHelper;
-import top.nkbe.niagram.ui.components.AnimatedTitleView;
+import io.neko.niagramx.config.NyaConfig;
+import io.neko.niagramx.helpers.TypefaceHelper;
+import io.neko.niagramx.ui.components.AnimatedTitleView;
 
 @SuppressLint("ViewConstructor")
 public class DialogStoriesCell extends FrameLayout implements NotificationCenter.NotificationCenterDelegate, FactorAnimator.Target {

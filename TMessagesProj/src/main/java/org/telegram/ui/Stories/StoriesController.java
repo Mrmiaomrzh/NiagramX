@@ -88,7 +88,7 @@ import java.util.Objects;
 import java.util.Set;
 import java.util.TreeSet;
 
-import top.nkbe.niagram.config.NyaConfig;
+import io.neko.niagramx.config.NyaConfig;
 
 public class StoriesController {
 

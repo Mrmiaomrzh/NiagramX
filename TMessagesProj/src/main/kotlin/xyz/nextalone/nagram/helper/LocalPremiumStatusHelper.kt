@@ -4,7 +4,7 @@ import androidx.core.content.edit
 import com.google.gson.Gson
 import org.telegram.messenger.UserConfig
 import org.telegram.tgnet.TLRPC
-import top.nkbe.niagram.config.NyaConfig
+import io.neko.niagramx.config.NyaConfig
 
 data class LocalEmojiStatusData(
     var documentId: Long?, var until: Int?

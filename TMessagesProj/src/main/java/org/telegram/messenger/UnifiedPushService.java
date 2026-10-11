@@ -22,8 +22,8 @@ import java.security.interfaces.ECPublicKey;
 import java.security.spec.ECGenParameterSpec;
 import java.security.spec.PKCS8EncodedKeySpec;
 
-import top.nkbe.niagram.utils.WebPushDecryptor;
-import top.nkbe.niagram.config.NyaConfig;
+import io.neko.niagramx.utils.WebPushDecryptor;
+import io.neko.niagramx.config.NyaConfig;
 
 @SuppressWarnings("NullableProblems")
 public class UnifiedPushService extends PushService {

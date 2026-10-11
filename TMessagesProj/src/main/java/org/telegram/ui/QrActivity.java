@@ -118,7 +118,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import top.nkbe.niagram.config.NyaConfig;
+import io.neko.niagramx.config.NyaConfig;
 
 public class QrActivity extends BaseFragment {
 

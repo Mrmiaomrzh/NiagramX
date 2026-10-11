@@ -346,17 +346,17 @@ import java.util.Objects;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import kotlin.Unit;
-import top.nkbe.niagram.NekoXConfig;
-import top.nkbe.niagram.helpers.ChatsHelper;
-import top.nkbe.niagram.llm.LlmConfig;
-import top.nkbe.niagram.translate.Translator;
-import top.nkbe.niagram.translate.TranslatorKt;
-import top.nkbe.niagram.utils.AlertUtil;
-import top.nkbe.niagram.utils.AndroidUtil;
-import top.nkbe.niagram.utils.ProxyUtil;
-import top.nkbe.niagram.config.NyaConfig;
-import top.nkbe.niagram.helpers.MessageHelper;
-import top.nkbe.niagram.streaming.MediaStreamingProvider;
+import io.neko.niagramx.NekoXConfig;
+import io.neko.niagramx.helpers.ChatsHelper;
+import io.neko.niagramx.llm.LlmConfig;
+import io.neko.niagramx.translate.Translator;
+import io.neko.niagramx.translate.TranslatorKt;
+import io.neko.niagramx.utils.AlertUtil;
+import io.neko.niagramx.utils.AndroidUtil;
+import io.neko.niagramx.utils.ProxyUtil;
+import io.neko.niagramx.config.NyaConfig;
+import io.neko.niagramx.helpers.MessageHelper;
+import io.neko.niagramx.streaming.MediaStreamingProvider;
 import xyz.nextalone.nagram.helper.MotionPhotoHelper;
 
 import me.vkryl.android.animator.BoolAnimator;
@@ -14982,8 +14982,8 @@ public class PhotoViewer implements NotificationCenter.NotificationCenterDelegat
                     menuItem.hideSubItem(gallery_menu_delete);
                 }
                 boolean isTTL = newMessageObject.messageOwner.ttl != 0 && newMessageObject.messageOwner.ttl < 60 * 60;
-                boolean blockTTL = isTTL && !top.nkbe.niagram.config.NyaConfig.INSTANCE.getSaveTTLMedia().Bool();
-                boolean blockNoForwards = noforwards && !top.nkbe.niagram.config.NyaConfig.INSTANCE.getAllowCopyProtectedContent().Bool();
+                boolean blockTTL = isTTL && !io.neko.niagramx.config.NyaConfig.INSTANCE.getSaveTTLMedia().Bool();
+                boolean blockNoForwards = noforwards && !io.neko.niagramx.config.NyaConfig.INSTANCE.getAllowCopyProtectedContent().Bool();
                 boolean canPaint = !isLivePhoto && (newMessageObject.getDocument() == null || newMessageObject.canPreviewDocument() || newMessageObject.getMimeType().startsWith("video/")) && !(isEmbedVideo || blockTTL || blockNoForwards) && canSendMediaToParentChatActivity() && !opennedFromMedia;
                 if (isEmbedVideo) {
                     menuItem.showSubItem(gallery_menu_openin);
@@ -15179,8 +15179,8 @@ public class PhotoViewer implements NotificationCenter.NotificationCenterDelegat
                 setItemVisible(sendItem, false, false);
             }
             boolean isTTL = newMessageObject.messageOwner.ttl != 0 && newMessageObject.messageOwner.ttl < 60 * 60;
-            boolean blockTTL = isTTL && !top.nkbe.niagram.config.NyaConfig.INSTANCE.getSaveTTLMedia().Bool();
-            boolean blockNoForwards = noforwards && !top.nkbe.niagram.config.NyaConfig.INSTANCE.getAllowCopyProtectedContent().Bool();
+            boolean blockTTL = isTTL && !io.neko.niagramx.config.NyaConfig.INSTANCE.getSaveTTLMedia().Bool();
+            boolean blockNoForwards = noforwards && !io.neko.niagramx.config.NyaConfig.INSTANCE.getAllowCopyProtectedContent().Bool();
             if (isEmbedVideo || blockTTL || blockNoForwards) {
                 allowShare = false;
                 galleryButton.setVisibility(View.GONE);
@@ -15293,7 +15293,7 @@ public class PhotoViewer implements NotificationCenter.NotificationCenterDelegat
             }
             actionBarContainer.setSubtitle(subtitle, animated);
             final boolean noforwards = avatarsDialogId != 0 && MessagesController.getInstance(currentAccount).isPeerNoForwards(avatarsDialogId);
-            if (noforwards && !top.nkbe.niagram.config.NyaConfig.INSTANCE.getAllowCopyProtectedContent().Bool()) {
+            if (noforwards && !io.neko.niagramx.config.NyaConfig.INSTANCE.getAllowCopyProtectedContent().Bool()) {
                 galleryButton.setVisibility(View.GONE);
                 galleryGap.setVisibility(View.GONE);
             } else {

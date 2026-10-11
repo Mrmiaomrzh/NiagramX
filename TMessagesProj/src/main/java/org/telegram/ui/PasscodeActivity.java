@@ -92,8 +92,8 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-import top.nkbe.niagram.config.NyaConfig;
-import top.nkbe.niagram.helpers.PasscodeHelper;
+import io.neko.niagramx.config.NyaConfig;
+import io.neko.niagramx.helpers.PasscodeHelper;
 
 public class PasscodeActivity extends BaseFragment implements NotificationCenter.NotificationCenterDelegate {
     public final static int TYPE_MANAGE_CODE_SETTINGS = 0,

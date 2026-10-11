@@ -53,7 +53,7 @@ import org.telegram.utils.proxy.WebProxyTransport;
 import org.telegram.utils.proxy.ProxySettings;
 import org.telegram.ui.Components.VideoPlayer;
 import org.telegram.ui.LoginActivity;
-import top.nkbe.niagram.helpers.WebSocketHelper;
+import io.neko.niagramx.helpers.WebSocketHelper;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -84,12 +84,12 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import javax.net.ssl.SSLException;
 
-import top.nkbe.niagram.ErrorDatabase;
+import io.neko.niagramx.ErrorDatabase;
 
-import top.nkbe.niagram.NekoXConfig;
-import top.nkbe.niagram.utils.DnsFactory;
-import top.nkbe.niagram.utils.ProxyUtil;
-import top.nkbe.niagram.config.NyaConfig;
+import io.neko.niagramx.NekoXConfig;
+import io.neko.niagramx.utils.DnsFactory;
+import io.neko.niagramx.utils.ProxyUtil;
+import io.neko.niagramx.config.NyaConfig;
 
 @OptIn(markerClass = UnstableApi.class)
 public class ConnectionsManager extends BaseController {

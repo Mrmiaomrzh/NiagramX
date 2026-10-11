@@ -218,7 +218,7 @@ public class GroupCallUserCell extends FrameLayout {
         public VerifiedDrawable(Context context, int verifiedType) {
             super();
             drawables[0] = context.getResources().getDrawable(R.drawable.verified_area).mutate();
-            int color = top.nkbe.niagram.helpers.NiagramVerifiedHelper.INSTANCE.getBadgeBackgroundColor(verifiedType, 0xff75B3EE);
+            int color = io.neko.niagramx.helpers.NiagramVerifiedHelper.INSTANCE.getBadgeBackgroundColor(verifiedType, 0xff75B3EE);
             drawables[0].setColorFilter(new PorterDuffColorFilter(color, PorterDuff.Mode.MULTIPLY));
             drawables[1] = context.getResources().getDrawable(R.drawable.verified_check).mutate();
         }

@@ -4,7 +4,7 @@ import android.media.AudioRecord
 import android.media.audiofx.AcousticEchoCanceler
 import android.media.audiofx.AutomaticGainControl
 import android.media.audiofx.NoiseSuppressor
-import top.nkbe.niagram.config.NyaConfig
+import io.neko.niagramx.config.NyaConfig
 
 object AudioEnhance {
     var automaticGainControl: AutomaticGainControl? =

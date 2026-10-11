@@ -268,17 +268,17 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
 import kotlin.text.StringsKt;
-import top.nkbe.niagram.helpers.MonetHelper;
-import top.nkbe.niagram.helpers.SettingsHelper;
-import top.nkbe.niagram.helpers.remote.EmojiHelper;
-import top.nkbe.niagram.helpers.remote.PagePreviewRulesHelper;
-import top.nkbe.niagram.helpers.remote.UpdateHelper;
-import top.nkbe.niagram.settings.NekoSettingsActivity;
-import top.nkbe.niagram.utils.AlertUtil;
-import top.nkbe.niagram.utils.AndroidUtil;
-import top.nkbe.niagram.utils.ProxyUtil;
-import top.nkbe.niagram.config.NyaConfig;
-import top.nkbe.niagram.ui.icons.IconsResources;
+import io.neko.niagramx.helpers.MonetHelper;
+import io.neko.niagramx.helpers.SettingsHelper;
+import io.neko.niagramx.helpers.remote.EmojiHelper;
+import io.neko.niagramx.helpers.remote.PagePreviewRulesHelper;
+import io.neko.niagramx.helpers.remote.UpdateHelper;
+import io.neko.niagramx.settings.NekoSettingsActivity;
+import io.neko.niagramx.utils.AlertUtil;
+import io.neko.niagramx.utils.AndroidUtil;
+import io.neko.niagramx.utils.ProxyUtil;
+import io.neko.niagramx.config.NyaConfig;
+import io.neko.niagramx.ui.icons.IconsResources;
 
 public class LaunchActivity extends BasePermissionsActivity implements INavigationLayout.INavigationLayoutDelegate, NotificationCenter.NotificationCenterDelegate, DialogsActivity.DialogsActivityDelegate, IPipActivity {
     public final static String EXTRA_FORCE_NOT_INTERNAL_APPS = "force_not_internal_apps";
@@ -6939,7 +6939,7 @@ public class LaunchActivity extends BasePermissionsActivity implements INavigati
             }
         });
         onPasscodePause();
-        top.nkbe.niagram.helpers.ChatLockManager.lockAll();
+        io.neko.niagramx.helpers.ChatLockManager.lockAll();
         actionBarLayout.onPause();
         if (AndroidUtilities.isTablet()) {
             if (rightActionBarLayout != null) {

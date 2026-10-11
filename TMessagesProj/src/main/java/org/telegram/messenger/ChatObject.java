@@ -42,8 +42,8 @@ import java.util.List;
 
 import me.vkryl.core.BitwiseUtils;
 
-import top.nkbe.niagram.DialogConfig;
-import top.nkbe.niagram.config.NyaConfig;
+import io.neko.niagramx.DialogConfig;
+import io.neko.niagramx.config.NyaConfig;
 
 public class ChatObject {
 

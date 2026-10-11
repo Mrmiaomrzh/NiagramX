@@ -116,8 +116,8 @@ import java.util.List;
 
 import me.vkryl.core.reference.ReferenceList;
 
-import top.nkbe.niagram.helpers.MessageHelper;
-import top.nkbe.niagram.config.NyaConfig;
+import io.neko.niagramx.helpers.MessageHelper;
+import io.neko.niagramx.config.NyaConfig;
 
 public class ContentPreviewViewer {
 

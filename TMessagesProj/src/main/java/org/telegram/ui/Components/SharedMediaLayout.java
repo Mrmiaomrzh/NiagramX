@@ -176,10 +176,10 @@ import java.util.HashSet;
 import java.util.Objects;
 
 import kotlin.Unit;
-import top.nkbe.niagram.ui.BottomBuilder;
-import top.nkbe.niagram.utils.AlertUtil;
-import top.nkbe.niagram.utils.ProxyUtil;
-import top.nkbe.niagram.config.NyaConfig;
+import io.neko.niagramx.ui.BottomBuilder;
+import io.neko.niagramx.utils.AlertUtil;
+import io.neko.niagramx.utils.ProxyUtil;
+import io.neko.niagramx.config.NyaConfig;
 
 @SuppressWarnings("unchecked")
 public class SharedMediaLayout extends FrameLayout implements NotificationCenter.NotificationCenterDelegate, DialogCell.DialogCellDelegate {
@@ -1365,9 +1365,9 @@ public class SharedMediaLayout extends FrameLayout implements NotificationCenter
                     return object;
                 }
             }
-            if (mediaPages[0].selectedType == 0 && (closing ? (top.nkbe.niagram.config.NyaConfig.INSTANCE.getScrollToSeenPhotoOnClose().Bool() || (firstVisiblePosition >= 0 && lastVisiblePosition >= 0)) : (firstVisiblePosition >= 0 && lastVisiblePosition >= 0))) {
+            if (mediaPages[0].selectedType == 0 && (closing ? (io.neko.niagramx.config.NyaConfig.INSTANCE.getScrollToSeenPhotoOnClose().Bool() || (firstVisiblePosition >= 0 && lastVisiblePosition >= 0)) : (firstVisiblePosition >= 0 && lastVisiblePosition >= 0))) {
                 int position = photoVideoAdapter.getPositionForIndex(index);
-                if (closing && top.nkbe.niagram.config.NyaConfig.INSTANCE.getScrollToSeenPhotoOnClose().Bool() && position >= 0) {
+                if (closing && io.neko.niagramx.config.NyaConfig.INSTANCE.getScrollToSeenPhotoOnClose().Bool() && position >= 0) {
                     mediaPages[0].layoutManager.scrollToPositionWithOffset(position, 0);
                     delegate.scrollToSharedMedia();
                 } else if (position <= firstVisiblePosition) {

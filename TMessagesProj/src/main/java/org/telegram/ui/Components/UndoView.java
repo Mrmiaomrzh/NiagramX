@@ -67,8 +67,8 @@ import org.telegram.ui.PaymentFormActivity;
 
 import java.util.ArrayList;
 
-import top.nkbe.niagram.config.NyaConfig;
-import top.nkbe.niagram.helpers.AppRestartHelper;
+import io.neko.niagramx.config.NyaConfig;
+import io.neko.niagramx.helpers.AppRestartHelper;
 
 @SuppressWarnings("FieldCanBeLocal")
 // @Deprecated // use Bulletin instead

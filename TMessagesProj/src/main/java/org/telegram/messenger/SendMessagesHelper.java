@@ -134,8 +134,8 @@ import java.util.concurrent.TimeUnit;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
-import top.nkbe.niagram.utils.StringUtils;
-import top.nkbe.niagram.config.NyaConfig;
+import io.neko.niagramx.utils.StringUtils;
+import io.neko.niagramx.config.NyaConfig;
 
 public class SendMessagesHelper extends BaseController implements NotificationCenter.NotificationCenterDelegate {
 

@@ -37,7 +37,7 @@ public class StatusBadgeComponent {
     public Drawable updateDrawable(TLRPC.User user, TLRPC.Chat chat, int colorFilter, boolean animated) {
         if (chat != null && chat.verifiedExtended()) {
             android.content.Context context = parentView != null ? parentView.getContext() : org.telegram.messenger.ApplicationLoader.applicationContext;
-            Drawable d = top.nkbe.niagram.helpers.NiagramVerifiedHelper.createVerifiedDrawable(context, chat.getVerifiedType(), Theme.getColor(Theme.key_chats_verifiedBackground));
+            Drawable d = io.neko.niagramx.helpers.NiagramVerifiedHelper.createVerifiedDrawable(context, chat.getVerifiedType(), Theme.getColor(Theme.key_chats_verifiedBackground));
             statusDrawable.set(d, animated);
             statusDrawable.setColor(null);
         } else if (chat != null && DialogObject.getEmojiStatusDocumentId(chat.emoji_status) != 0) {
@@ -45,7 +45,7 @@ public class StatusBadgeComponent {
             statusDrawable.setColor(colorFilter);
         } else if (user != null && user.verifiedExtended()) {
             android.content.Context context = parentView != null ? parentView.getContext() : org.telegram.messenger.ApplicationLoader.applicationContext;
-            Drawable d = top.nkbe.niagram.helpers.NiagramVerifiedHelper.createVerifiedDrawable(context, user.getVerifiedType(), Theme.getColor(Theme.key_chats_verifiedBackground));
+            Drawable d = io.neko.niagramx.helpers.NiagramVerifiedHelper.createVerifiedDrawable(context, user.getVerifiedType(), Theme.getColor(Theme.key_chats_verifiedBackground));
             statusDrawable.set(d, animated);
             statusDrawable.setColor(null);
         } else if (user != null && DialogObject.getEmojiStatusDocumentId(user.emoji_status) != 0) {

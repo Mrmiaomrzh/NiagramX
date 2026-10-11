@@ -51,7 +51,7 @@ import org.telegram.ui.Components.StatusBadgeComponent;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import top.nkbe.niagram.filters.ReactionFilter;
+import io.neko.niagramx.filters.ReactionFilter;
 
 public class MessageSeenView extends FrameLayout {
 

@@ -130,8 +130,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 
-import top.nkbe.niagram.config.NyaConfig;
-import top.nkbe.niagram.location.NekoLocation;
+import io.neko.niagramx.config.NyaConfig;
+import io.neko.niagramx.location.NekoLocation;
 
 public class LocationActivity extends BaseFragment implements NotificationCenter.NotificationCenterDelegate {
 

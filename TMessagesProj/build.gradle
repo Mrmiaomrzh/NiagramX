@@ -60,7 +60,7 @@ if (properties != null) {
 }
 
 keystorePwd = keystorePwd ?: System.getenv('KEYSTORE_PASS') ?: ''
-alias = alias ?: System.getenv('ALIAS_NAME') ?: 'NPigramX'
+alias = alias ?: System.getenv('ALIAS_NAME') ?: 'niagramx'
 pwd = pwd ?: System.getenv('ALIAS_PASS') ?: ''
 keystorePath = keystorePath ?: System.getenv('KEYSTORE_PATH')
 
@@ -189,7 +189,7 @@ android {
         }
     }
 
-    def isSigningAvailable = keystorePwd != null && alias != null && pwd != null && !project.hasProperty('withoutSigning') && System.getenv('DEBUG_BUILD') == null
+    def isSigningAvailable = !keystorePwd?.isBlank() && !alias?.isBlank() && !pwd?.isBlank() && !project.hasProperty('withoutSigning') && System.getenv('DEBUG_BUILD') == null
     if (isSigningAvailable) {
         def resolvedStoreFile = keystorePath ? file(keystorePath) : project.file('release.keystore')
         signingConfigs {

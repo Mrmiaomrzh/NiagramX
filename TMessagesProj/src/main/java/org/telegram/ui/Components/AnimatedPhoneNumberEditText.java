@@ -11,7 +11,7 @@ import androidx.dynamicanimation.animation.SpringForce;
 import java.util.ArrayList;
 import java.util.List;
 
-import top.nkbe.niagram.config.NyaConfig;
+import io.neko.niagramx.config.NyaConfig;
 
 public class AnimatedPhoneNumberEditText extends HintEditText {
     private final static float SPRING_MULTIPLIER = 100f;

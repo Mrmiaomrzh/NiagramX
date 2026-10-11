@@ -179,10 +179,10 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
-import static top.nkbe.niagram.settings.NekoChatSettingsActivity.getDeleteMenuChecks;
-import top.nkbe.niagram.helpers.PasscodeHelper;
-import top.nkbe.niagram.helpers.ScheduleTimeHelper;
-import top.nkbe.niagram.config.NyaConfig;
+import static io.neko.niagramx.settings.NekoChatSettingsActivity.getDeleteMenuChecks;
+import io.neko.niagramx.helpers.PasscodeHelper;
+import io.neko.niagramx.helpers.ScheduleTimeHelper;
+import io.neko.niagramx.config.NyaConfig;
 
 import com.radolyn.ayugram.AyuConstants;
 import com.radolyn.ayugram.messages.AyuMessagesController;
@@ -1764,7 +1764,7 @@ public class AlertsCreator {
     public static void showOpenUrlAlert(Context context, String url, boolean punycode, boolean tryTelegraph, boolean ask, boolean forceNotInternalForApps, long inlineReturn, Browser.Progress progress, @Nullable TLRPC.WebPage webPage, Theme.ResourcesProvider resourcesProvider) {
         if (!AndroidUtilities.isContextSafe(context)) return;
         final String cleanUrl = (url != null && NyaConfig.INSTANCE.getCleanTrackingParams().Bool())
-                ? top.nkbe.niagram.utils.UrlCleaner.clean(url)
+                ? io.neko.niagramx.utils.UrlCleaner.clean(url)
                 : url;
         final String scheme = cleanUrl == null ? null : Uri.parse(cleanUrl).getScheme();
         if ((Browser.isInternalUrl(cleanUrl, null) || !ask || "mailto".equalsIgnoreCase(scheme) || NyaConfig.skipOpenLinkConfirm.Bool()) && !NyaConfig.INSTANCE.getConfirmAllLinks().Bool()) {
@@ -4490,7 +4490,7 @@ public class AlertsCreator {
         titleLayout.addView(titleView, LayoutHelper.createFrame(LayoutHelper.WRAP_CONTENT, LayoutHelper.WRAP_CONTENT, Gravity.LEFT | Gravity.TOP, 0, 12, 0, 0));
         titleView.setOnTouchListener((v, event) -> true);
 
-        final boolean[] notify = new boolean[] { !top.nkbe.niagram.config.NyaConfig.INSTANCE.getSilentMessageByDefault().Bool() };
+        final boolean[] notify = new boolean[] { !io.neko.niagramx.config.NyaConfig.INSTANCE.getSilentMessageByDefault().Bool() };
         ActionBarMenuItem optionsButton = null;
         if (DialogObject.isUserDialog(dialogId) && dialogId != selfUserId) {
             TLRPC.User user = MessagesController.getInstance(UserConfig.selectedAccount).getUser(dialogId);

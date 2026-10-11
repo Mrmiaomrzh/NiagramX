@@ -27,7 +27,7 @@ import org.telegram.ui.Components.Paint.Views.RoundView;
 
 import java.io.File;
 
-import top.nkbe.niagram.config.NyaConfig;
+import io.neko.niagramx.config.NyaConfig;
 
 public class RoundVideoRecorder extends FrameLayout {
 

@@ -83,11 +83,11 @@ import java.util.Locale;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import kotlin.Unit;
-import top.nkbe.niagram.helpers.ChatsHelper;
-import top.nkbe.niagram.translate.Translator;
-import top.nkbe.niagram.translate.TranslatorKt;
-import top.nkbe.niagram.utils.AlertUtil;
-import top.nkbe.niagram.config.NyaConfig;
+import io.neko.niagramx.helpers.ChatsHelper;
+import io.neko.niagramx.translate.Translator;
+import io.neko.niagramx.translate.TranslatorKt;
+import io.neko.niagramx.utils.AlertUtil;
+import io.neko.niagramx.config.NyaConfig;
 
 public class PhotoAlbumPickerActivity extends BaseFragment implements NotificationCenter.NotificationCenterDelegate {
 

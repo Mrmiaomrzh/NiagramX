@@ -21,7 +21,7 @@ import org.telegram.messenger.SharedConfig;
 import org.telegram.messenger.voip.VoIPService;
 import org.telegram.ui.PhotoViewer;
 
-import top.nkbe.niagram.config.NyaConfig;
+import io.neko.niagramx.config.NyaConfig;
 
 public class EarListener implements SensorEventListener {
 

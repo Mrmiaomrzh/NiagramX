@@ -22,7 +22,7 @@ import android.util.Log;
 
 import androidx.core.app.NotificationCompat;
 
-import top.nkbe.niagram.config.NyaConfig;
+import io.neko.niagramx.config.NyaConfig;
 
 public class NotificationsService extends Service {
 

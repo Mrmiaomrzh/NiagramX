@@ -20,8 +20,8 @@ import static org.telegram.messenger.LocaleController.getString;
 import static org.telegram.ui.Stars.StarGiftSheet.replaceUnderstood;
 import static org.telegram.ui.Stars.StarsIntroActivity.formatStarsAmountShort;
 import static org.telegram.ui.bots.AffiliateProgramFragment.percents;
-import static top.nkbe.niagram.DatacenterActivity.getDCLocation;
-import static top.nkbe.niagram.DatacenterActivity.getDCName;
+import static io.neko.niagramx.DatacenterActivity.getDCLocation;
+import static io.neko.niagramx.DatacenterActivity.getDCName;
 
 import android.Manifest;
 import android.animation.Animator;
@@ -357,34 +357,34 @@ import kotlin.Unit;
 import me.vkryl.android.animator.BoolAnimator;
 import me.vkryl.core.reference.ReferenceList;
 
-import top.nkbe.niagram.BackButtonMenuRecent;
-import top.nkbe.niagram.DatacenterActivity;
-import top.nkbe.niagram.filters.AyuFilter;
-import top.nkbe.niagram.filters.RegexChatFiltersListActivity;
-import top.nkbe.niagram.filters.RegexFiltersSettingActivity;
-import top.nkbe.niagram.filters.ShadowBanListActivity;
-import top.nkbe.niagram.helpers.ChatsHelper;
-import top.nkbe.niagram.helpers.LocalNameHelper;
-import top.nkbe.niagram.helpers.MainTabsHelper;
-import top.nkbe.niagram.helpers.MessageHelper;
-import top.nkbe.niagram.helpers.ProfileDateHelper;
-import top.nkbe.niagram.helpers.SettingsHelper;
-import top.nkbe.niagram.helpers.SettingsSearchResult;
-import top.nkbe.niagram.helpers.remote.UpdateHelper;
-import top.nkbe.niagram.llm.LlmConfig;
-import top.nkbe.niagram.menu.forum.CustomForumTabsPopupWrapper;
-import top.nkbe.niagram.menu.ghostmode.GhostModeExclusionPopupWrapper;
-import top.nkbe.niagram.menu.regexfilters.RegexFiltersExclusionPopupWrapper;
-import top.nkbe.niagram.menu.saveDeleted.SaveExclusionPopupWrapper;
-import top.nkbe.niagram.parts.DialogTransKt;
-import top.nkbe.niagram.settings.NekoSettingsActivity;
-import top.nkbe.niagram.translate.Translator;
-import top.nkbe.niagram.ui.BottomBuilder;
-import top.nkbe.niagram.utils.AlertUtil;
-import top.nkbe.niagram.utils.AndroidUtil;
-import top.nkbe.niagram.utils.FileUtil;
-import top.nkbe.niagram.utils.ShareUtil;
-import top.nkbe.niagram.config.NyaConfig;
+import io.neko.niagramx.BackButtonMenuRecent;
+import io.neko.niagramx.DatacenterActivity;
+import io.neko.niagramx.filters.AyuFilter;
+import io.neko.niagramx.filters.RegexChatFiltersListActivity;
+import io.neko.niagramx.filters.RegexFiltersSettingActivity;
+import io.neko.niagramx.filters.ShadowBanListActivity;
+import io.neko.niagramx.helpers.ChatsHelper;
+import io.neko.niagramx.helpers.LocalNameHelper;
+import io.neko.niagramx.helpers.MainTabsHelper;
+import io.neko.niagramx.helpers.MessageHelper;
+import io.neko.niagramx.helpers.ProfileDateHelper;
+import io.neko.niagramx.helpers.SettingsHelper;
+import io.neko.niagramx.helpers.SettingsSearchResult;
+import io.neko.niagramx.helpers.remote.UpdateHelper;
+import io.neko.niagramx.llm.LlmConfig;
+import io.neko.niagramx.menu.forum.CustomForumTabsPopupWrapper;
+import io.neko.niagramx.menu.ghostmode.GhostModeExclusionPopupWrapper;
+import io.neko.niagramx.menu.regexfilters.RegexFiltersExclusionPopupWrapper;
+import io.neko.niagramx.menu.saveDeleted.SaveExclusionPopupWrapper;
+import io.neko.niagramx.parts.DialogTransKt;
+import io.neko.niagramx.settings.NekoSettingsActivity;
+import io.neko.niagramx.translate.Translator;
+import io.neko.niagramx.ui.BottomBuilder;
+import io.neko.niagramx.utils.AlertUtil;
+import io.neko.niagramx.utils.AndroidUtil;
+import io.neko.niagramx.utils.FileUtil;
+import io.neko.niagramx.utils.ShareUtil;
+import io.neko.niagramx.config.NyaConfig;
 
 public class ProfileActivity extends BaseFragment implements NotificationCenter.NotificationCenterDelegate, DialogsActivity.DialogsActivityDelegate, SharedMediaLayout.SharedMediaPreloaderDelegate, ImageUpdater.ImageUpdaterDelegate, SharedMediaLayout.Delegate, MainTabsActivity.TabFragmentDelegate {
     private RecyclerListView listView;
@@ -3076,10 +3076,10 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
                 } else if (id == lock_chat) {
                     long curDialogId = getDialogId();
                     if (curDialogId != 0) {
-                        boolean isLocked = top.nkbe.niagram.helpers.ChatLockManager.isChatLocked(currentAccount, curDialogId);
-                        top.nkbe.niagram.helpers.ChatLockManager.unlockChat(getParentActivity(), curDialogId, success -> {
+                        boolean isLocked = io.neko.niagramx.helpers.ChatLockManager.isChatLocked(currentAccount, curDialogId);
+                        io.neko.niagramx.helpers.ChatLockManager.unlockChat(getParentActivity(), curDialogId, success -> {
                             if (success) {
-                                top.nkbe.niagram.helpers.ChatLockManager.setChatLocked(currentAccount, curDialogId, !isLocked);
+                                io.neko.niagramx.helpers.ChatLockManager.setChatLocked(currentAccount, curDialogId, !isLocked);
                                 BulletinFactory.of(ProfileActivity.this).createSimpleBulletin(
                                         !isLocked ? R.drawable.baseline_lock_24 : R.drawable.menu_unlock,
                                         LocaleController.getString(!isLocked ? R.string.ChatLocked : R.string.UnlockChat)
@@ -5954,7 +5954,7 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
         });
         ratingView.setOnClickListener(this::showStarRatingBottomSheet);
         if (userInfo != null) {
-            ratingView.set(top.nkbe.niagram.config.NyaConfig.INSTANCE.getHideStarsRating().Bool() ? null : userInfo.stars_rating);
+            ratingView.set(io.neko.niagramx.config.NyaConfig.INSTANCE.getHideStarsRating().Bool() ? null : userInfo.stars_rating);
         }
 
         avatarContainer2.addView(ratingView);
@@ -8493,7 +8493,7 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
 
     private void checkStarRatingVisible() {
         if (ratingView != null) {
-            ratingView.setVisibility(!top.nkbe.niagram.config.NyaConfig.INSTANCE.getHideStarsRating().Bool() && !mediaHeaderVisible && isStarRatingVisible1);
+            ratingView.setVisibility(!io.neko.niagramx.config.NyaConfig.INSTANCE.getHideStarsRating().Bool() && !mediaHeaderVisible && isStarRatingVisible1);
         }
     }
 
@@ -9503,7 +9503,7 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
                     avatarImage.setHasStories(needInsetForStories());
                 }
                 if (chatId != 0) {
-                    boolean gift = !top.nkbe.niagram.config.NyaConfig.INSTANCE.getHideGiftButtons().Bool() && !BuildVars.IS_BILLING_UNAVAILABLE && !getMessagesController().premiumPurchaseBlocked() && chatInfo != null && chatInfo.stargifts_available;
+                    boolean gift = !io.neko.niagramx.config.NyaConfig.INSTANCE.getHideGiftButtons().Bool() && !BuildVars.IS_BILLING_UNAVAILABLE && !getMessagesController().premiumPurchaseBlocked() && chatInfo != null && chatInfo.stargifts_available;
                     otherItem.setSubItemShown(gift_premium, gift);
                     if (actionsView != null) {
                         actionsView.set(ProfileActionsView.KEY_GIFT, gift);
@@ -9595,7 +9595,7 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
             if (uid == userId) {
                 userInfo = (TLRPC.UserFull) args[1];
                 if (ratingView != null) {
-                    ratingView.set(top.nkbe.niagram.config.NyaConfig.INSTANCE.getHideStarsRating().Bool() ? null : userInfo.stars_rating);
+                    ratingView.set(io.neko.niagramx.config.NyaConfig.INSTANCE.getHideStarsRating().Bool() ? null : userInfo.stars_rating);
                 }
                 if (storyView != null) {
                     storyView.setStories(userInfo.stories);
@@ -10723,7 +10723,7 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
         }
         fetchUsersFromChannelInfo();
         if (chatId != 0) {
-            boolean gift = !top.nkbe.niagram.config.NyaConfig.INSTANCE.getHideGiftButtons().Bool() && !BuildVars.IS_BILLING_UNAVAILABLE && !getMessagesController().premiumPurchaseBlocked() && chatInfo != null && chatInfo.stargifts_available;
+            boolean gift = !io.neko.niagramx.config.NyaConfig.INSTANCE.getHideGiftButtons().Bool() && !BuildVars.IS_BILLING_UNAVAILABLE && !getMessagesController().premiumPurchaseBlocked() && chatInfo != null && chatInfo.stargifts_available;
             otherItem.setSubItemShown(gift_premium, gift);
             if (actionsView != null) {
                 actionsView.set(ProfileActionsView.KEY_GIFT, gift);
@@ -10742,7 +10742,7 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
     ) {
         userInfo = value;
         if (ratingView != null) {
-            ratingView.set(top.nkbe.niagram.config.NyaConfig.INSTANCE.getHideStarsRating().Bool() ? null : userInfo.stars_rating);
+            ratingView.set(io.neko.niagramx.config.NyaConfig.INSTANCE.getHideStarsRating().Bool() ? null : userInfo.stars_rating);
         }
         if (storyView != null) {
             storyView.setStories(userInfo.stories);
@@ -11516,9 +11516,9 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
             verifiedCheckDrawable[a] = Theme.profile_verifiedCheckDrawable.getConstantState().newDrawable().mutate();
             TLRPC.User user = getMessagesController().getUser(userId);
             TLRPC.Chat chat = getMessagesController().getChat(chatId);
-            int verifiedType = user != null ? user.getVerifiedType() : (chat != null ? chat.getVerifiedType() : top.nkbe.niagram.helpers.NiagramVerifiedHelper.TYPE_NONE);
-            if (verifiedType != top.nkbe.niagram.helpers.NiagramVerifiedHelper.TYPE_NONE && verifiedType != top.nkbe.niagram.helpers.NiagramVerifiedHelper.TYPE_TELEGRAM) {
-                int targetColor = top.nkbe.niagram.helpers.NiagramVerifiedHelper.getBadgeBackgroundColor(verifiedType, getThemedColor(Theme.key_profile_verifiedBackground));
+            int verifiedType = user != null ? user.getVerifiedType() : (chat != null ? chat.getVerifiedType() : io.neko.niagramx.helpers.NiagramVerifiedHelper.TYPE_NONE);
+            if (verifiedType != io.neko.niagramx.helpers.NiagramVerifiedHelper.TYPE_NONE && verifiedType != io.neko.niagramx.helpers.NiagramVerifiedHelper.TYPE_TELEGRAM) {
+                int targetColor = io.neko.niagramx.helpers.NiagramVerifiedHelper.getBadgeBackgroundColor(verifiedType, getThemedColor(Theme.key_profile_verifiedBackground));
                 verifiedDrawable[a].setColorFilter(new PorterDuffColorFilter(targetColor, PorterDuff.Mode.MULTIPLY));
             } else if (a == 1 && peerColor != null) {
                 int color = Theme.adaptHSV(peerColor.hasColor6(Theme.isCurrentThemeDark()) ? peerColor.getColor5() : peerColor.getColor3(), +.1f, Theme.isCurrentThemeDark() ? -.1f : -.08f);
@@ -12668,7 +12668,7 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
                     otherItem.addSubItem(delete_contact, R.drawable.msg_delete, LocaleController.getString(R.string.DeleteContact));
                 }
                 if (!UserObject.isDeleted(user) && !isBot && currentEncryptedChat == null && !userBlocked && userId != 333000 && userId != 777000 && userId != 42777) {
-                    if (!top.nkbe.niagram.config.NyaConfig.INSTANCE.getHideGiftButtons().Bool() && !BuildVars.IS_BILLING_UNAVAILABLE && !user.self && !user.bot && !MessagesController.isSupportUser(user) && !getMessagesController().premiumPurchaseBlocked()) {
+                    if (!io.neko.niagramx.config.NyaConfig.INSTANCE.getHideGiftButtons().Bool() && !BuildVars.IS_BILLING_UNAVAILABLE && !user.self && !user.bot && !MessagesController.isSupportUser(user) && !getMessagesController().premiumPurchaseBlocked()) {
                         StarsController.getInstance(currentAccount).loadStarGifts();
                         otherItem.addSubItem(gift_premium, R.drawable.msg_gift_premium, LocaleController.getString(R.string.ProfileSendAGift));
                         giftAction = true;
@@ -12773,7 +12773,7 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
                         shareAction = !chat.creator;
                         otherItem.addSubItem(share, R.drawable.msg_shareout, getString(R.string.BotShare));
                     }
-                    if (!top.nkbe.niagram.config.NyaConfig.INSTANCE.getHideGiftButtons().Bool() && !BuildVars.IS_BILLING_UNAVAILABLE && !getMessagesController().premiumPurchaseBlocked()) {
+                    if (!io.neko.niagramx.config.NyaConfig.INSTANCE.getHideGiftButtons().Bool() && !BuildVars.IS_BILLING_UNAVAILABLE && !getMessagesController().premiumPurchaseBlocked()) {
                         StarsController.getInstance(currentAccount).loadStarGifts();
                         otherItem.addSubItem(gift_premium, R.drawable.msg_gift_premium, LocaleController.getString(R.string.ProfileSendAGiftToChannel));
                         otherItem.setSubItemShown(gift_premium, chatInfo != null && chatInfo.stargifts_available);
@@ -12867,7 +12867,7 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
             actionsView.set(ProfileActionsView.KEY_VOICE_CHAT, voiceChatAction);
             actionsView.set(ProfileActionsView.KEY_STREAM, streamAction);
 
-            actionsView.set(ProfileActionsView.KEY_GIFT, !top.nkbe.niagram.config.NyaConfig.INSTANCE.getHideGiftButtons().Bool() && giftAction);
+            actionsView.set(ProfileActionsView.KEY_GIFT, !io.neko.niagramx.config.NyaConfig.INSTANCE.getHideGiftButtons().Bool() && giftAction);
             callItemVisible = videoCallItemVisible = false;
             if (!discussAction) {
                 if (isTopic) {
@@ -13002,7 +13002,7 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
         }
         long curDialogId = getDialogId();
         if (curDialogId != 0) {
-            boolean isLocked = top.nkbe.niagram.helpers.ChatLockManager.isChatLocked(currentAccount, curDialogId);
+            boolean isLocked = io.neko.niagramx.helpers.ChatLockManager.isChatLocked(currentAccount, curDialogId);
             menu.addSubItem(lock_chat, isLocked ? R.drawable.menu_unlock : R.drawable.baseline_lock_24, LocaleController.getString(isLocked ? R.string.UnlockChat : R.string.LockChat));
         }
         menu.addSubItem(clear_cache, R.drawable.msg_clear, getString(R.string.ClearCache));
@@ -16514,7 +16514,7 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
 
     private float lastRatingViewTranslationXOffset;
     private float getRatingViewTranslationXOffset() {
-        if (top.nkbe.niagram.config.NyaConfig.INSTANCE.getHideStarsRating().Bool()) {
+        if (io.neko.niagramx.config.NyaConfig.INSTANCE.getHideStarsRating().Bool()) {
             return 0;
         }
         return (ratingView != null) ? dp(22) * ratingView.getVisibilityFactor() : 0;
@@ -16522,7 +16522,7 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
 
     private float lastRatingViewTranslationYOffset;
     private float getRatingViewTranslationYOffset() {
-        if (top.nkbe.niagram.config.NyaConfig.INSTANCE.getHideStarsRating().Bool()) {
+        if (io.neko.niagramx.config.NyaConfig.INSTANCE.getHideStarsRating().Bool()) {
             return 0;
         }
         return (ratingView != null) ? dp(3) * ratingView.getVisibilityFactor() : 0;

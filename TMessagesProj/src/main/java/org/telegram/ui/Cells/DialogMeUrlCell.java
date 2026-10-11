@@ -336,7 +336,7 @@ public class DialogMeUrlCell extends BaseCell {
         if (drawVerified) {
             setDrawableBounds(Theme.dialogs_verifiedDrawable, nameMuteLeft, AndroidUtilities.dp(16.5f));
             setDrawableBounds(Theme.dialogs_verifiedCheckDrawable, nameMuteLeft, AndroidUtilities.dp(16.5f));
-            int customVerifiedColor = top.nkbe.niagram.helpers.NiagramVerifiedHelper.INSTANCE.getBadgeBackgroundColor(verifiedType, 0);
+            int customVerifiedColor = io.neko.niagramx.helpers.NiagramVerifiedHelper.INSTANCE.getBadgeBackgroundColor(verifiedType, 0);
             if (customVerifiedColor != 0) {
                 Theme.setDrawableColor(Theme.dialogs_verifiedDrawable, customVerifiedColor);
             }

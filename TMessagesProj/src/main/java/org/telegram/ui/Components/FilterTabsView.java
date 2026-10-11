@@ -72,9 +72,9 @@ import org.telegram.ui.Stories.recorder.HintView2;
 
 import java.util.ArrayList;
 
-import top.nkbe.niagram.NekoXConfig;
-import top.nkbe.niagram.folder.FolderIconHelper;
-import top.nkbe.niagram.config.NyaConfig;
+import io.neko.niagramx.NekoXConfig;
+import io.neko.niagramx.folder.FolderIconHelper;
+import io.neko.niagramx.config.NyaConfig;
 
 @SuppressLint("ViewConstructor")
 public class FilterTabsView extends FrameLayout {

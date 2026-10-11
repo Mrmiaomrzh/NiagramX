@@ -46,8 +46,8 @@ import org.telegram.ui.Components.CubicBezierInterpolator;
 
 import java.util.List;
 
-import top.nkbe.niagram.ui.icons.IconsResources;
-import top.nkbe.niagram.config.NyaConfig;
+import io.neko.niagramx.ui.icons.IconsResources;
+import io.neko.niagramx.config.NyaConfig;
 
 public class QuickShareSelectorDrawable extends Drawable implements Animator.AnimatorListener {
     public static class Sizes {

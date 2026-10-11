@@ -146,9 +146,9 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.concurrent.CountDownLatch;
 
-import top.nkbe.niagram.BackButtonMenuRecent;
-import top.nkbe.niagram.helpers.MainTabsHelper;
-import top.nkbe.niagram.config.NyaConfig;
+import io.neko.niagramx.BackButtonMenuRecent;
+import io.neko.niagramx.helpers.MainTabsHelper;
+import io.neko.niagramx.config.NyaConfig;
 
 public class TopicsFragment extends BaseFragment implements NotificationCenter.NotificationCenterDelegate, ChatActivityInterface, RightSlidingDialogContainer.BaseFragmentWithFullscreen, MainTabsActivity.TabFragmentDelegate {
 

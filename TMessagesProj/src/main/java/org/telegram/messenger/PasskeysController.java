@@ -58,7 +58,7 @@ import kotlinx.coroutines.Dispatchers;
 import kotlinx.coroutines.GlobalScope;
 import kotlinx.coroutines.Job;
 import kotlinx.coroutines.JobCancellationException;
-import top.nkbe.niagram.NekoXConfig;
+import io.neko.niagramx.NekoXConfig;
 
 @RequiresApi(api = 28)
 public class PasskeysController {

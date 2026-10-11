@@ -197,9 +197,9 @@
     java.lang.Object writeReplace();
     java.lang.Object readResolve();
 }
--keepclassmembernames,allowshrinking class top.nkbe.niagram.ui.cells.AccountCell { <fields>; }
--keepclassmembernames,allowshrinking class top.nkbe.niagram.ui.cells.EmojiSetCell { <fields>; }
--keepclassmembernames,allowshrinking class top.nkbe.niagram.settings.NekoChatSettingsActivity$StickerSizeCell { <fields>; }
+-keepclassmembernames,allowshrinking class io.neko.niagramx.ui.cells.AccountCell { <fields>; }
+-keepclassmembernames,allowshrinking class io.neko.niagramx.ui.cells.EmojiSetCell { <fields>; }
+-keepclassmembernames,allowshrinking class io.neko.niagramx.settings.NekoChatSettingsActivity$StickerSizeCell { <fields>; }
 
 # --- Keep Gson-reflected model fields used by Regex Filters import/export ---
 # Preserve fields annotated with @Expose so Gson can access them in release builds
@@ -208,12 +208,12 @@
 }
 
 # TransferData is an inner static class used only via Gson reflection; keep its fields
--keep class top.nkbe.niagram.filters.RegexFiltersSettingActivity$TransferData { *; }
+-keep class io.neko.niagramx.filters.RegexFiltersSettingActivity$TransferData { *; }
 
 # Be explicit for AyuFilter models to be safe
--keepclassmembers class top.nkbe.niagram.filters.AyuFilter$FilterModel { <fields>; }
--keepclassmembers class top.nkbe.niagram.filters.AyuFilter$ChatFilterEntry { <fields>; }
--keepclassmembers class top.nkbe.niagram.filters.AyuFilter$CustomFilteredUser { <fields>; }
+-keepclassmembers class io.neko.niagramx.filters.AyuFilter$FilterModel { <fields>; }
+-keepclassmembers class io.neko.niagramx.filters.AyuFilter$ChatFilterEntry { <fields>; }
+-keepclassmembers class io.neko.niagramx.filters.AyuFilter$CustomFilteredUser { <fields>; }
 
 # https://github.com/osmdroid/osmdroid/issues/633
 -dontwarn org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck

@@ -43,7 +43,7 @@ import org.telegram.ui.Components.blur3.utils.NinePatchBuilder;
 import java.lang.ref.WeakReference;
 import java.util.Arrays;
 
-import top.nkbe.niagram.config.NyaConfig;
+import io.neko.niagramx.config.NyaConfig;
 
 public abstract class BlurredBackgroundDrawable extends Drawable {
     public BlurredBackgroundDrawable() {

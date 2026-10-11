@@ -40,8 +40,8 @@ import org.telegram.tgnet.TLObject;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.ui.ActionBar.Theme;
 
-import top.nkbe.niagram.config.NyaConfig;
-import top.nkbe.niagram.filters.AyuFilter;
+import io.neko.niagramx.config.NyaConfig;
+import io.neko.niagramx.filters.AyuFilter;
 
 import java.util.ArrayList;
 

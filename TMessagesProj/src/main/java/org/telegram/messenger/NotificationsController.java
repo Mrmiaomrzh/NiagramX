@@ -99,9 +99,9 @@ import java.util.Map;
 import java.util.concurrent.CountDownLatch;
 import java.util.function.Consumer;
 
-import top.nkbe.niagram.NekoXConfig;
-import top.nkbe.niagram.filters.AyuFilter;
-import top.nkbe.niagram.config.NyaConfig;
+import io.neko.niagramx.NekoXConfig;
+import io.neko.niagramx.filters.AyuFilter;
+import io.neko.niagramx.config.NyaConfig;
 
 public class NotificationsController extends BaseController implements NotificationCenter.NotificationCenterDelegate {
 
@@ -3374,7 +3374,7 @@ public class NotificationsController extends BaseController implements Notificat
                             }
                         });
                     }
-                    boolean iosSounds = top.nkbe.niagram.config.NyaConfig.useIosSounds.Bool();
+                    boolean iosSounds = io.neko.niagramx.config.NyaConfig.useIosSounds.Bool();
                     if (lastUseIosSounds != iosSounds) {
                         lastUseIosSounds = iosSounds;
                         soundIn = 0;
@@ -5987,7 +5987,7 @@ public class NotificationsController extends BaseController implements Notificat
                         }
                     });
                 }
-                boolean iosSounds = top.nkbe.niagram.config.NyaConfig.useIosSounds.Bool();
+                boolean iosSounds = io.neko.niagramx.config.NyaConfig.useIosSounds.Bool();
                 if (lastUseIosSounds != iosSounds) {
                     lastUseIosSounds = iosSounds;
                     soundIn = 0;

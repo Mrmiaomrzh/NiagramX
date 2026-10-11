@@ -26,7 +26,7 @@ import android.view.ViewConfiguration;
 
 import me.vkryl.android.ViewUtils;
 import me.vkryl.core.BitwiseUtils;
-import top.nkbe.niagram.config.NyaConfig;
+import io.neko.niagramx.config.NyaConfig;
 
 public class ClickHelper {
   private static final int FLAG_CAUGHT = 0x01;

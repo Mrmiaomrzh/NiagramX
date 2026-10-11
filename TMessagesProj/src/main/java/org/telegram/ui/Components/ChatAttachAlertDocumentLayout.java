@@ -92,7 +92,7 @@ import java.util.Iterator;
 import java.util.Locale;
 import java.util.StringTokenizer;
 
-import top.nkbe.niagram.helpers.remote.EmojiHelper;
+import io.neko.niagramx.helpers.remote.EmojiHelper;
 
 public class ChatAttachAlertDocumentLayout extends ChatAttachAlert.AttachAlertLayout {
 

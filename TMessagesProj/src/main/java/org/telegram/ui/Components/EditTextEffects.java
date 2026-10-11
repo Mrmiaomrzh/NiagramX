@@ -27,7 +27,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-import top.nkbe.niagram.ui.components.InputTextAnimation;
+import io.neko.niagramx.ui.components.InputTextAnimation;
 
 public class EditTextEffects extends EditText {
     private InputTextAnimation inputTextAnimation;

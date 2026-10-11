@@ -108,8 +108,8 @@ import org.telegram.ui.Components.spoilers.SpoilersTextView;
 import java.util.ArrayList;
 import java.util.Collections;
 
-import top.nkbe.niagram.folder.FolderIconHelper;
-import top.nkbe.niagram.folder.IconSelectorAlert;
+import io.neko.niagramx.folder.FolderIconHelper;
+import io.neko.niagramx.folder.IconSelectorAlert;
 
 public class FilterCreateActivity extends BaseFragment {
 

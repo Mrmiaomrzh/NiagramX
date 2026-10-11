@@ -79,10 +79,10 @@ import java.util.function.Consumer;
 
 import me.vkryl.core.BitwiseUtils;
 
-import top.nkbe.niagram.filters.AyuFilter;
-import top.nkbe.niagram.helpers.AppRestartHelper;
-import top.nkbe.niagram.helpers.MessageHelper;
-import top.nkbe.niagram.config.NyaConfig;
+import io.neko.niagramx.filters.AyuFilter;
+import io.neko.niagramx.helpers.AppRestartHelper;
+import io.neko.niagramx.helpers.MessageHelper;
+import io.neko.niagramx.config.NyaConfig;
 import com.radolyn.ayugram.AyuConstants;
 import com.radolyn.ayugram.messages.AyuMessagesController;
 import com.radolyn.ayugram.messages.AyuSavePreferences;

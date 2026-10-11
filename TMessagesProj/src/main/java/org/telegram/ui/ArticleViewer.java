@@ -234,8 +234,8 @@ import java.util.concurrent.atomic.AtomicReference;
 
 import org.telegram.ui.iv.Latex;
 
-import top.nkbe.niagram.parts.ArticleTransKt;
-import top.nkbe.niagram.config.NyaConfig;
+import io.neko.niagramx.parts.ArticleTransKt;
+import io.neko.niagramx.config.NyaConfig;
 
 public class ArticleViewer extends IArticleViewer implements NotificationCenter.NotificationCenterDelegate {
 

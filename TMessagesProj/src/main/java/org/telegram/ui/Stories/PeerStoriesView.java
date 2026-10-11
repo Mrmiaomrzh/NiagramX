@@ -220,9 +220,9 @@ import java.util.Locale;
 import java.util.Objects;
 import java.util.concurrent.CountDownLatch;
 
-import top.nkbe.niagram.helpers.MessageHelper;
-import top.nkbe.niagram.ui.MessageDetailsActivity;
-import top.nkbe.niagram.config.NyaConfig;
+import io.neko.niagramx.helpers.MessageHelper;
+import io.neko.niagramx.ui.MessageDetailsActivity;
+import io.neko.niagramx.config.NyaConfig;
 
 public class PeerStoriesView extends SizeNotifierFrameLayout implements NotificationCenter.NotificationCenterDelegate {
 

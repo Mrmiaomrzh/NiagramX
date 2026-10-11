@@ -78,8 +78,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.Executor;
 
-import top.nkbe.niagram.config.NyaConfig;
-import top.nkbe.niagram.helpers.PasscodeHelper;
+import io.neko.niagramx.config.NyaConfig;
+import io.neko.niagramx.helpers.PasscodeHelper;
 
 public class PasscodeView extends FrameLayout implements NotificationCenter.NotificationCenterDelegate {
     private final static float BACKGROUND_SPRING_STIFFNESS = 300f;

@@ -27,7 +27,7 @@ import android.view.ViewTreeObserver;
 
 import java.lang.reflect.Method;
 
-import top.nkbe.niagram.config.NyaConfig;
+import io.neko.niagramx.config.NyaConfig;
 
 public final class ViewUtils {
   public static void onClick (View v) {

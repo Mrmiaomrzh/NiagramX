@@ -112,8 +112,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Locale;
 
-import top.nkbe.niagram.config.NyaConfig;
-import top.nkbe.niagram.helpers.MessageHelper;
+import io.neko.niagramx.config.NyaConfig;
+import io.neko.niagramx.helpers.MessageHelper;
 
 import com.radolyn.ayugram.proprietary.AyuMessageUtils;
 
@@ -970,7 +970,7 @@ public class SecretMediaViewer implements NotificationCenter.NotificationCenterD
                 WindowManager.LayoutParams.FLAG_LAYOUT_INSET_DECOR |
                 WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE |
                 WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS;
-        if (!top.nkbe.niagram.config.NyaConfig.INSTANCE.getAllowScreenCapture().Bool()) {
+        if (!io.neko.niagramx.config.NyaConfig.INSTANCE.getAllowScreenCapture().Bool()) {
             windowLayoutParams.flags |= WindowManager.LayoutParams.FLAG_SECURE;
             AndroidUtilities.logFlagSecure();
         }

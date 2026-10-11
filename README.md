@@ -38,11 +38,12 @@ Official releases and beta builds can be obtained from:
 
 ### Verify APK Signature
 
-Official release packages are signed with the official certificate:
+This fork's builds are signed with a self-managed keystore:
 
-- **Package Name**: `top.nkbe.niagram`
+- **Package Name**: `io.neko.niagramx`
+- **Key Alias**: `niagramx`
 - **SHA-256 Fingerprint**:  
-  `D6:A6:0D:55:15:ED:1F:5A:3B:29:A7:9C:47:ED:94:26:07:2F:F2:11:EA:40:97:0B:98:51:81:58:01:5A:1C:C6`
+  `5C:21:63:99:64:71:C9:60:7E:5B:3D:C1:0D:41:96:6F:F8:01:78:14:B8:E7:93:A7:51:CC:A6:FF:1E:95:58:F8`
 
 ---
 
@@ -73,6 +74,32 @@ Create `local.properties` in the project root:
 TELEGRAM_APP_ID=<your_telegram_app_id>
 TELEGRAM_APP_HASH=<your_telegram_app_hash>
 ```
+
+### Signing
+
+Local signing credentials are read from `local.properties` (or environment variables):
+
+```properties
+KEYSTORE_PATH=E:/path/to/niagramx.jks
+KEYSTORE_PASS=<store password>
+ALIAS_NAME=niagramx
+ALIAS_PASS=<key password>
+```
+
+If any of them is missing or blank, release/staging builds fall back to **unsigned** APKs (the `debug` build is unaffected).
+
+### CI Signing (GitHub Actions)
+
+`release.yml` / `staging.yml` read the same credentials from repo secrets. Configure these in *Settings → Secrets and variables → Actions* to get signed APKs in CI:
+
+| Secret | Value |
+|---|---|
+| `KEYSTORE_BASE64` | `base64 -w0 keystore/niagramx.jks` 的输出 |
+| `KEYSTORE_PASS` | keystore store password |
+| `ALIAS_NAME` | `niagramx` |
+| `ALIAS_PASS` | key password |
+
+Alternatively, put the whole `local.properties` (with `KEYSTORE_PATH` etc.) into the `LOCAL_PROPERTIES` secret as base64: `base64 -w0 local.properties`. Without these secrets CI still runs but produces unsigned APKs; the Telegram upload step is skipped automatically when the helper-bot secrets are absent.
 
 ---
 

@@ -386,36 +386,36 @@ import me.vkryl.android.animator.FactorAnimator;
 import me.vkryl.core.BitwiseUtils;
 import me.vkryl.core.reference.ReferenceList;
 
-import top.nkbe.niagram.BackButtonMenuRecent;
-import top.nkbe.niagram.filters.AyuFilter;
-import top.nkbe.niagram.filters.ReactionFilter;
-import top.nkbe.niagram.filters.RegexFilterEditActivity;
-import top.nkbe.niagram.helpers.ChatsHelper;
-import top.nkbe.niagram.helpers.MessageHelper;
-import top.nkbe.niagram.helpers.TranscribeHelper;
-import top.nkbe.niagram.helpers.remote.EmojiHelper;
-import top.nkbe.niagram.helpers.remote.PagePreviewRulesHelper;
-import top.nkbe.niagram.llm.LlmConfig;
-import top.nkbe.niagram.menu.copy.CopyPopupWrapper;
-import top.nkbe.niagram.menu.forward.ForwardPopupWrapper;
-import top.nkbe.niagram.menu.reply.ReplyPopupWrapper;
-import top.nkbe.niagram.menu.translate.TranslatePopupWrapper;
-import top.nkbe.niagram.parts.DialogTransKt;
-import top.nkbe.niagram.parts.MessageTransKt;
-import top.nkbe.niagram.parts.PollTransUpdatesKt;
-import top.nkbe.niagram.parts.RichMessageTransHelper;
-import top.nkbe.niagram.helpers.SettingsBackupHelper;
-import top.nkbe.niagram.translate.Translator;
+import io.neko.niagramx.BackButtonMenuRecent;
+import io.neko.niagramx.filters.AyuFilter;
+import io.neko.niagramx.filters.ReactionFilter;
+import io.neko.niagramx.filters.RegexFilterEditActivity;
+import io.neko.niagramx.helpers.ChatsHelper;
+import io.neko.niagramx.helpers.MessageHelper;
+import io.neko.niagramx.helpers.TranscribeHelper;
+import io.neko.niagramx.helpers.remote.EmojiHelper;
+import io.neko.niagramx.helpers.remote.PagePreviewRulesHelper;
+import io.neko.niagramx.llm.LlmConfig;
+import io.neko.niagramx.menu.copy.CopyPopupWrapper;
+import io.neko.niagramx.menu.forward.ForwardPopupWrapper;
+import io.neko.niagramx.menu.reply.ReplyPopupWrapper;
+import io.neko.niagramx.menu.translate.TranslatePopupWrapper;
+import io.neko.niagramx.parts.DialogTransKt;
+import io.neko.niagramx.parts.MessageTransKt;
+import io.neko.niagramx.parts.PollTransUpdatesKt;
+import io.neko.niagramx.parts.RichMessageTransHelper;
+import io.neko.niagramx.helpers.SettingsBackupHelper;
+import io.neko.niagramx.translate.Translator;
 import xyz.nextalone.nagram.helper.MotionPhotoHelper;
-import top.nkbe.niagram.translate.TranslatorKt;
-import top.nkbe.niagram.ui.BookmarksActivity;
-import top.nkbe.niagram.ui.BottomBuilder;
-import top.nkbe.niagram.ui.MessageDetailsActivity;
-import top.nkbe.niagram.ui.components.GroupedIconsView;
-import top.nkbe.niagram.utils.AlertUtil;
-import top.nkbe.niagram.utils.AndroidUtil;
-import top.nkbe.niagram.utils.ProxyUtil;
-import top.nkbe.niagram.config.NyaConfig;
+import io.neko.niagramx.translate.TranslatorKt;
+import io.neko.niagramx.ui.BookmarksActivity;
+import io.neko.niagramx.ui.BottomBuilder;
+import io.neko.niagramx.ui.MessageDetailsActivity;
+import io.neko.niagramx.ui.components.GroupedIconsView;
+import io.neko.niagramx.utils.AlertUtil;
+import io.neko.niagramx.utils.AndroidUtil;
+import io.neko.niagramx.utils.ProxyUtil;
+import io.neko.niagramx.config.NyaConfig;
 import xyz.nextalone.nagram.ToggleResult;
 import xyz.nextalone.nagram.helper.BookmarksHelper;
 import xyz.nextalone.nagram.helper.DoubleTap;
@@ -1684,7 +1684,7 @@ public class ChatActivity extends BaseFragment implements
 
         @Override
         public PhotoViewer.PlaceProviderObject getPlaceForPhoto(MessageObject messageObject, TLRPC.FileLocation fileLocation, int index, boolean needPreview, boolean closing) {
-            if (closing && top.nkbe.niagram.config.NyaConfig.INSTANCE.getScrollToSeenPhotoOnClose().Bool() && messageObject != null) {
+            if (closing && io.neko.niagramx.config.NyaConfig.INSTANCE.getScrollToSeenPhotoOnClose().Bool() && messageObject != null) {
                 scrollToMessageId(messageObject.getId(), 0, false, 0, false, 0);
             }
             return ChatActivity.this.getPlaceForPhoto(messageObject, fileLocation, index, needPreview, false);
@@ -4988,7 +4988,7 @@ public class ChatActivity extends BaseFragment implements
             if (NyaConfig.INSTANCE.getChatMenuItemViewDeleted().Bool() && NyaConfig.INSTANCE.getEnableSaveDeletedMessages().Bool()) headerItem.lazilyAddSubItem(nkbtn_viewDeleted, R.drawable.msg_view_file, getString(R.string.ViewDeleted));
             if (NyaConfig.INSTANCE.getChatMenuItemClearDeleted().Bool() && NyaConfig.INSTANCE.getEnableSaveDeletedMessages().Bool()) headerItem.lazilyAddSubItem(nkbtn_clearDeleted, R.drawable.msg_clear, getString(R.string.ClearDeleted));
             if (dialog_id != 0) {
-                boolean isLocked = top.nkbe.niagram.helpers.ChatLockManager.isChatLocked(currentAccount, dialog_id);
+                boolean isLocked = io.neko.niagramx.helpers.ChatLockManager.isChatLocked(currentAccount, dialog_id);
                 if (NyaConfig.INSTANCE.getChatMenuItemLockChat().Bool() || isLocked) {
                     headerItem.lazilyAddSubItem(nkbtn_lock_chat, isLocked ? R.drawable.menu_unlock : R.drawable.baseline_lock_24, LocaleController.getString(isLocked ? R.string.UnlockChat : R.string.LockChat));
                 }
@@ -20191,7 +20191,7 @@ public class ChatActivity extends BaseFragment implements
             if (selectedMessagesIds[index].indexOfKey(messageObject.getId()) >= 0) {
                 selectedMessagesIds[index].remove(messageObject.getId());
                 if (!isReport()) {
-                    boolean allowCopy = top.nkbe.niagram.config.NyaConfig.INSTANCE.getAllowCopyProtectedContent().Bool();
+                    boolean allowCopy = io.neko.niagramx.config.NyaConfig.INSTANCE.getAllowCopyProtectedContent().Bool();
                     if ((messageObject.type == MessageObject.TYPE_TEXT || messageObject.isAnimatedEmoji() || messageObject.caption != null) && (allowCopy || !(messageObject.messageOwner != null && messageObject.messageOwner.noforwards))) {
                         selectedMessagesCanCopyIds[index].remove(messageObject.getId());
                     }
@@ -20229,7 +20229,7 @@ public class ChatActivity extends BaseFragment implements
                 }
                 selectedMessagesIds[index].put(messageObject.getId(), messageObject);
                 if (!isReport()) {
-                    boolean allowCopy = top.nkbe.niagram.config.NyaConfig.INSTANCE.getAllowCopyProtectedContent().Bool();
+                    boolean allowCopy = io.neko.niagramx.config.NyaConfig.INSTANCE.getAllowCopyProtectedContent().Bool();
                     if ((messageObject.type == MessageObject.TYPE_TEXT || messageObject.isAnimatedEmoji() || messageObject.caption != null) && (allowCopy || !(messageObject.messageOwner != null && messageObject.messageOwner.noforwards))) {
                         selectedMessagesCanCopyIds[index].put(messageObject.getId(), messageObject);
                     }
@@ -35465,7 +35465,7 @@ public class ChatActivity extends BaseFragment implements
                     } else if (getMessageType(selectedObject) == MESSAGE_TYPE_FONT) {
                         File finalLocFile = locFile;
                         if (!EmojiHelper.isValidEmojiPack(finalLocFile)) {
-                            top.nkbe.niagram.helpers.FontHelper.showCategorySelectDialog(getParentActivity(), finalLocFile);
+                            io.neko.niagramx.helpers.FontHelper.showCategorySelectDialog(getParentActivity(), finalLocFile);
                         } else {
                             AlertDialog progressDialog = new AlertDialog(getParentActivity(), 3);
                             Utilities.globalQueue.postRunnable(() -> {
@@ -35497,7 +35497,7 @@ public class ChatActivity extends BaseFragment implements
                                             EmojiHelper.reloadEmoji();
                                         }
                                     } else {
-                                        top.nkbe.niagram.helpers.FontHelper.showCategorySelectDialog(getParentActivity(), finalLocFile);
+                                        io.neko.niagramx.helpers.FontHelper.showCategorySelectDialog(getParentActivity(), finalLocFile);
                                     }
                                 });
                             });
@@ -38289,7 +38289,7 @@ public class ChatActivity extends BaseFragment implements
                     builder.setTitleMultipleLines(true);
                 }
                 final int finalTimestamp = timestamp;
-                boolean blockNoForwards = (isPeerNoForwards() || (messageObject != null && messageObject.messageOwner != null && messageObject.messageOwner.noforwards)) && !top.nkbe.niagram.config.NyaConfig.INSTANCE.getAllowCopyProtectedContent().Bool();
+                boolean blockNoForwards = (isPeerNoForwards() || (messageObject != null && messageObject.messageOwner != null && messageObject.messageOwner.noforwards)) && !io.neko.niagramx.config.NyaConfig.INSTANCE.getAllowCopyProtectedContent().Bool();
                 CharSequence[] items = blockNoForwards ? new CharSequence[]{
                         getString(R.string.Open)
                 } : new CharSequence[]{
@@ -43907,8 +43907,8 @@ public class ChatActivity extends BaseFragment implements
                 } else if (message.getDocumentName().toLowerCase().endsWith(".nekox-settings.json")) {
                     File finalLocFile = locFile;
                     SettingsBackupHelper.importSettings(getParentActivity(), finalLocFile);
-                } else if (top.nkbe.niagram.helpers.FontHelper.isFontFile(locFile) || (message.getDocumentName() != null && (message.getDocumentName().toLowerCase().endsWith(".ttf") || message.getDocumentName().toLowerCase().endsWith(".otf")))) {
-                    top.nkbe.niagram.helpers.FontHelper.showFontPreviewDialog(getParentActivity(), locFile);
+                } else if (io.neko.niagramx.helpers.FontHelper.isFontFile(locFile) || (message.getDocumentName() != null && (message.getDocumentName().toLowerCase().endsWith(".ttf") || message.getDocumentName().toLowerCase().endsWith(".otf")))) {
+                    io.neko.niagramx.helpers.FontHelper.showFontPreviewDialog(getParentActivity(), locFile);
                 } else {
                     boolean handled = false;
                     if (message.canPreviewDocument()) {
@@ -46847,10 +46847,10 @@ public class ChatActivity extends BaseFragment implements
             presentFragment(new AyuViewDeleted(dialog_id));
         } else if (id == nkbtn_lock_chat) {
             if (dialog_id != 0) {
-                boolean isLocked = top.nkbe.niagram.helpers.ChatLockManager.isChatLocked(currentAccount, dialog_id);
-                top.nkbe.niagram.helpers.ChatLockManager.unlockChat(getParentActivity(), dialog_id, success -> {
+                boolean isLocked = io.neko.niagramx.helpers.ChatLockManager.isChatLocked(currentAccount, dialog_id);
+                io.neko.niagramx.helpers.ChatLockManager.unlockChat(getParentActivity(), dialog_id, success -> {
                     if (success) {
-                        top.nkbe.niagram.helpers.ChatLockManager.setChatLocked(currentAccount, dialog_id, !isLocked);
+                        io.neko.niagramx.helpers.ChatLockManager.setChatLocked(currentAccount, dialog_id, !isLocked);
                         BulletinFactory.of(ChatActivity.this).createSimpleBulletin(
                                 !isLocked ? R.drawable.baseline_lock_24 : R.drawable.menu_unlock,
                                 LocaleController.getString(!isLocked ? R.string.ChatLocked : R.string.UnlockChat)

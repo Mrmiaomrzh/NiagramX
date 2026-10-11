@@ -73,9 +73,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import top.nkbe.niagram.helpers.WebSocketHelper;
-import top.nkbe.niagram.utils.AlertUtil;
-import top.nkbe.niagram.utils.ProxyUtil;
+import io.neko.niagramx.helpers.WebSocketHelper;
+import io.neko.niagramx.utils.AlertUtil;
+import io.neko.niagramx.utils.ProxyUtil;
 
 public class ProxyListActivity extends BaseFragment implements NotificationCenter.NotificationCenterDelegate {
     private final static boolean IS_PROXY_ROTATION_AVAILABLE = true;

@@ -65,12 +65,12 @@ import java.util.List;
 import java.util.Objects;
 
 import kotlin.Unit;
-import top.nkbe.niagram.helpers.MessageHelper;
-import top.nkbe.niagram.llm.LlmConfig;
-import top.nkbe.niagram.translate.Translator;
-import top.nkbe.niagram.ui.MessageDetailsActivity;
-import top.nkbe.niagram.ui.NekoDelegateFragment;
-import top.nkbe.niagram.ui.cells.NekoMessageCell;
+import io.neko.niagramx.helpers.MessageHelper;
+import io.neko.niagramx.llm.LlmConfig;
+import io.neko.niagramx.translate.Translator;
+import io.neko.niagramx.ui.MessageDetailsActivity;
+import io.neko.niagramx.ui.NekoDelegateFragment;
+import io.neko.niagramx.ui.cells.NekoMessageCell;
 
 public class AyuMessageHistory extends NekoDelegateFragment {
     private static final int OPTION_DELETE = 1;

@@ -244,9 +244,9 @@ import java.util.zip.GZIPOutputStream;
 
 import me.vkryl.core.BitwiseUtils;
 
-import top.nkbe.niagram.helpers.FontHelper;
-import top.nkbe.niagram.helpers.TypefaceHelper;
-import top.nkbe.niagram.config.NyaConfig;
+import io.neko.niagramx.helpers.FontHelper;
+import io.neko.niagramx.helpers.TypefaceHelper;
+import io.neko.niagramx.config.NyaConfig;
 
 public class AndroidUtilities {
     public final static int REPLACING_TAG_TYPE_LINK = 0;
@@ -3630,10 +3630,10 @@ public class AndroidUtilities {
 
     public static boolean addToClipboard(CharSequence plain, String html) {
         if (html == null) return addToClipboard(plain);
-        if (plain != null && top.nkbe.niagram.config.NyaConfig.INSTANCE.getCleanTrackingParams().Bool()) {
+        if (plain != null && io.neko.niagramx.config.NyaConfig.INSTANCE.getCleanTrackingParams().Bool()) {
             String s = plain.toString().trim();
             if (s.startsWith("http://") || s.startsWith("https://")) {
-                plain = top.nkbe.niagram.utils.UrlCleaner.clean(s);
+                plain = io.neko.niagramx.utils.UrlCleaner.clean(s);
                 html = plain.toString();
             }
         }
@@ -3649,10 +3649,10 @@ public class AndroidUtilities {
     }
 
     public static boolean addToClipboard(CharSequence str) {
-        if (str != null && top.nkbe.niagram.config.NyaConfig.INSTANCE.getCleanTrackingParams().Bool()) {
+        if (str != null && io.neko.niagramx.config.NyaConfig.INSTANCE.getCleanTrackingParams().Bool()) {
             String s = str.toString().trim();
             if (s.startsWith("http://") || s.startsWith("https://")) {
-                str = top.nkbe.niagram.utils.UrlCleaner.clean(s);
+                str = io.neko.niagramx.utils.UrlCleaner.clean(s);
             }
         }
         try {

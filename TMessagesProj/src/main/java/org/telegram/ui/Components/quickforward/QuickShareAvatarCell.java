@@ -27,8 +27,8 @@ import org.telegram.ui.ActionBar.Theme;
 import org.telegram.ui.Cells.ChatMessageCell;
 import org.telegram.ui.Components.AvatarDrawable;
 
-import top.nkbe.niagram.ui.icons.IconsResources;
-import top.nkbe.niagram.config.NyaConfig;
+import io.neko.niagramx.ui.icons.IconsResources;
+import io.neko.niagramx.config.NyaConfig;
 
 class QuickShareAvatarCell implements ValueAnimator.AnimatorUpdateListener {
     private static final long DURATION = 180L;

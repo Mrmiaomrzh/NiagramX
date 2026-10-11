@@ -36,7 +36,7 @@ import org.telegram.ui.ActionBar.Theme;
 import java.util.ArrayList;
 import java.util.List;
 
-import top.nkbe.niagram.filters.ReactionFilter;
+import io.neko.niagramx.filters.ReactionFilter;
 
 public class ReactedHeaderView extends FrameLayout {
     private FlickerLoadingView flickerLoadingView;

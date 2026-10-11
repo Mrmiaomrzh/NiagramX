@@ -286,14 +286,14 @@ import me.vkryl.android.animator.BoolAnimator;
 import me.vkryl.android.animator.FactorAnimator;
 import me.vkryl.android.util.ClickHelper;
 
-import top.nkbe.niagram.BackButtonMenuRecent;
-import top.nkbe.niagram.helpers.MainTabsHelper;
-import top.nkbe.niagram.helpers.PasscodeHelper;
-import top.nkbe.niagram.helpers.TypefaceHelper;
-import top.nkbe.niagram.helpers.remote.EmojiHelper;
-import top.nkbe.niagram.settings.GhostModeActivity;
-import top.nkbe.niagram.ui.BookmarkManagerActivity;
-import top.nkbe.niagram.config.NyaConfig;
+import io.neko.niagramx.BackButtonMenuRecent;
+import io.neko.niagramx.helpers.MainTabsHelper;
+import io.neko.niagramx.helpers.PasscodeHelper;
+import io.neko.niagramx.helpers.TypefaceHelper;
+import io.neko.niagramx.helpers.remote.EmojiHelper;
+import io.neko.niagramx.settings.GhostModeActivity;
+import io.neko.niagramx.ui.BookmarkManagerActivity;
+import io.neko.niagramx.config.NyaConfig;
 
 public class DialogsActivity extends BaseFragment implements NotificationCenter.NotificationCenterDelegate, FloatingDebugProvider, FactorAnimator.Target, MainTabsActivity.TabFragmentDelegate {
     private final int ADDITIONAL_LIST_HEIGHT_DP = Build.VERSION.SDK_INT >= 31 ? 48 : 0;
@@ -4153,18 +4153,18 @@ public class DialogsActivity extends BaseFragment implements NotificationCenter.
                 } else if (id == lock_chat) {
                     if (!selectedDialogs.isEmpty()) {
                         long singleDialogId = selectedDialogs.get(0);
-                        boolean isLocked = top.nkbe.niagram.helpers.ChatLockManager.isChatLocked(currentAccount, singleDialogId);
+                        boolean isLocked = io.neko.niagramx.helpers.ChatLockManager.isChatLocked(currentAccount, singleDialogId);
                         if (isLocked) {
-                            top.nkbe.niagram.helpers.ChatLockManager.unlockChat(getParentActivity(), singleDialogId, success -> {
+                            io.neko.niagramx.helpers.ChatLockManager.unlockChat(getParentActivity(), singleDialogId, success -> {
                                 if (success) {
-                                    top.nkbe.niagram.helpers.ChatLockManager.setChatLocked(currentAccount, singleDialogId, false);
+                                    io.neko.niagramx.helpers.ChatLockManager.setChatLocked(currentAccount, singleDialogId, false);
                                     hideActionMode(false);
                                 }
                             });
                         } else {
-                            top.nkbe.niagram.helpers.ChatLockManager.unlockChat(getParentActivity(), singleDialogId, success -> {
+                            io.neko.niagramx.helpers.ChatLockManager.unlockChat(getParentActivity(), singleDialogId, success -> {
                                 if (success) {
-                                    top.nkbe.niagram.helpers.ChatLockManager.setChatLocked(currentAccount, singleDialogId, true);
+                                    io.neko.niagramx.helpers.ChatLockManager.setChatLocked(currentAccount, singleDialogId, true);
                                     hideActionMode(false);
                                 }
                             });
@@ -8278,9 +8278,9 @@ public class DialogsActivity extends BaseFragment implements NotificationCenter.
                 }
             }
         } else {
-            if (top.nkbe.niagram.helpers.ChatLockManager.isChatLocked(currentAccount, dialogId) && !top.nkbe.niagram.helpers.ChatLockManager.isChatUnlockedInSession(dialogId)) {
+            if (io.neko.niagramx.helpers.ChatLockManager.isChatLocked(currentAccount, dialogId) && !io.neko.niagramx.helpers.ChatLockManager.isChatUnlockedInSession(dialogId)) {
                 final long fDialogId = dialogId;
-                top.nkbe.niagram.helpers.ChatLockManager.unlockChat(getParentActivity(), dialogId, success -> {
+                io.neko.niagramx.helpers.ChatLockManager.unlockChat(getParentActivity(), dialogId, success -> {
                     if (success) {
                         onItemClick(view, position, adapter, x, y);
                     }
@@ -10182,7 +10182,7 @@ public class DialogsActivity extends BaseFragment implements NotificationCenter.
         if (lockItem != null) {
             if (count == 1) {
                 long singleDialogId = selectedDialogs.get(0);
-                boolean isLocked = top.nkbe.niagram.helpers.ChatLockManager.isChatLocked(currentAccount, singleDialogId);
+                boolean isLocked = io.neko.niagramx.helpers.ChatLockManager.isChatLocked(currentAccount, singleDialogId);
                 lockItem.setText(LocaleController.getString(isLocked ? R.string.UnlockChat : R.string.LockChat));
                 lockItem.setIcon(isLocked ? R.drawable.menu_unlock : R.drawable.baseline_lock_24);
                 lockItem.setVisibility(View.VISIBLE);
@@ -11995,8 +11995,8 @@ public class DialogsActivity extends BaseFragment implements NotificationCenter.
     }
 
     public void didSelectResult(final long dialogId, long topicId, boolean useAlert, final boolean param, TopicsFragment topicsFragment) {
-        if (top.nkbe.niagram.helpers.ChatLockManager.isChatLocked(currentAccount, dialogId) && !top.nkbe.niagram.helpers.ChatLockManager.isChatUnlockedInSession(dialogId)) {
-            top.nkbe.niagram.helpers.ChatLockManager.unlockChat(getParentActivity(), dialogId, success -> {
+        if (io.neko.niagramx.helpers.ChatLockManager.isChatLocked(currentAccount, dialogId) && !io.neko.niagramx.helpers.ChatLockManager.isChatUnlockedInSession(dialogId)) {
+            io.neko.niagramx.helpers.ChatLockManager.unlockChat(getParentActivity(), dialogId, success -> {
                 if (success) {
                     didSelectResult(dialogId, topicId, useAlert, param, topicsFragment);
                 }
@@ -13379,9 +13379,9 @@ public class DialogsActivity extends BaseFragment implements NotificationCenter.
                         didSelectResult(did, 0, true, false);
                     }
                 } else {
-                    if (top.nkbe.niagram.helpers.ChatLockManager.isChatLocked(currentAccount, did) && !top.nkbe.niagram.helpers.ChatLockManager.isChatUnlockedInSession(did)) {
+                    if (io.neko.niagramx.helpers.ChatLockManager.isChatLocked(currentAccount, did) && !io.neko.niagramx.helpers.ChatLockManager.isChatUnlockedInSession(did)) {
                         final long fDid = did;
-                        top.nkbe.niagram.helpers.ChatLockManager.unlockChat(getParentActivity(), did, success -> {
+                        io.neko.niagramx.helpers.ChatLockManager.unlockChat(getParentActivity(), did, success -> {
                             if (success) {
                                 didPressedOnSubDialog(fDid);
                             }

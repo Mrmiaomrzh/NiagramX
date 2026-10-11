@@ -75,7 +75,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 
-import top.nkbe.niagram.config.NyaConfig;
+import io.neko.niagramx.config.NyaConfig;
 
 public class CustomEmojiReactionsWindow {
 

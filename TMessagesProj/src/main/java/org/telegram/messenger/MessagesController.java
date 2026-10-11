@@ -139,13 +139,13 @@ import java.util.stream.Collectors;
 
 import me.vkryl.core.BitwiseUtils;
 
-import top.nkbe.niagram.filters.AyuFilter;
-import top.nkbe.niagram.filters.ReactionFilter;
-import top.nkbe.niagram.helpers.ChatsHelper;
-import top.nkbe.niagram.helpers.LocalNameHelper;
-import top.nkbe.niagram.helpers.MessageHelper;
-import top.nkbe.niagram.utils.AlertUtil;
-import top.nkbe.niagram.config.NyaConfig;
+import io.neko.niagramx.filters.AyuFilter;
+import io.neko.niagramx.filters.ReactionFilter;
+import io.neko.niagramx.helpers.ChatsHelper;
+import io.neko.niagramx.helpers.LocalNameHelper;
+import io.neko.niagramx.helpers.MessageHelper;
+import io.neko.niagramx.utils.AlertUtil;
+import io.neko.niagramx.config.NyaConfig;
 import xyz.nextalone.nagram.helper.LocalPremiumStatusHelper;
 
 import com.radolyn.ayugram.AyuConstants;
