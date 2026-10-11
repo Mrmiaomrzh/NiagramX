@@ -11778,7 +11778,7 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
             if (userInfo != null && !isBlockedClown) {
                 vectorAvatar = FileLoader.getVectorMarkupVideoSize(user.photo != null && user.photo.personal ? userInfo.personal_photo : userInfo.profile_photo);
                 if (vectorAvatar != null) {
-                    vectorAvatarThumbDrawable = new VectorAvatarThumbDrawable(vectorAvatar, user.premium, VectorAvatarThumbDrawable.TYPE_PROFILE);
+                    vectorAvatarThumbDrawable = new VectorAvatarThumbDrawable(vectorAvatar, user.premium || MessagesController.getInstance(currentAccount).isPremiumUser(user), VectorAvatarThumbDrawable.TYPE_PROFILE);
                 }
             }
             final ImageLocation videoLocation = avatarsViewPager.getCurrentVideoLocation(thumbLocation, imageLocation);

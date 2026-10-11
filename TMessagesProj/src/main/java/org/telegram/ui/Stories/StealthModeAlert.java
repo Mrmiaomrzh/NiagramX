@@ -125,7 +125,7 @@ public class StealthModeAlert extends BottomSheet {
         button.setIcon(R.raw.unlock_icon);
         ScaleStateListAnimator.apply(button);
         TLRPC.User user = UserConfig.getInstance(currentAccount).getCurrentUser();
-        if (!user.premium) {
+        if (!UserConfig.getInstance(currentAccount).isPremium()) {
             button.setIcon(R.raw.unlock_icon);
             button.setButton(LocaleController.getString(R.string.UnlockStealthMode), v -> {
                 dismiss();
@@ -144,7 +144,7 @@ public class StealthModeAlert extends BottomSheet {
         setCustomView(frameLayout);
 
         button.setOnClickListener(v -> {
-            if (!user.premium) {
+            if (!UserConfig.getInstance(currentAccount).isPremium()) {
                 dismiss();
                 BaseFragment baseFragment = LaunchActivity.getLastFragment();
                 if (baseFragment != null) {

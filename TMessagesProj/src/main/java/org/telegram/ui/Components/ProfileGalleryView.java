@@ -1036,7 +1036,7 @@ public class ProfileGalleryView extends CircularViewPager implements Notificatio
                                     final TLRPC.VideoSize videoSize = FileLoader.getClosestVideoSizeWithSize(photo.video_sizes, 1000);
                                     final TLRPC.VideoSize vectorMarkupVideoSize = FileLoader.getVectorMarkupVideoSize(photo);
                                     if (vectorMarkupVideoSize != null) {
-                                        vectorAvatars.add(new VectorAvatarThumbDrawable(vectorMarkupVideoSize, user != null && user.premium, VectorAvatarThumbDrawable.TYPE_PROFILE));
+                                        vectorAvatars.add(new VectorAvatarThumbDrawable(vectorMarkupVideoSize, user != null && (user.premium || MessagesController.getInstance(currentAccount).isPremiumUser(user)), VectorAvatarThumbDrawable.TYPE_PROFILE));
                                         videoLocations.add(null);
                                         videoFileNames.add(null);
                                     } else {
@@ -1061,7 +1061,7 @@ public class ProfileGalleryView extends CircularViewPager implements Notificatio
                                     final TLRPC.VideoSize videoSize = FileLoader.getClosestVideoSizeWithSize(photo.video_sizes, 1000);
                                     final TLRPC.VideoSize vectorMarkupVideoSize = FileLoader.getVectorMarkupVideoSize(photo);
                                     if (vectorMarkupVideoSize != null) {
-                                        vectorAvatars.add(new VectorAvatarThumbDrawable(vectorMarkupVideoSize, user != null && user.premium, VectorAvatarThumbDrawable.TYPE_PROFILE));
+                                        vectorAvatars.add(new VectorAvatarThumbDrawable(vectorMarkupVideoSize, user != null && (user.premium || MessagesController.getInstance(currentAccount).isPremiumUser(user)), VectorAvatarThumbDrawable.TYPE_PROFILE));
                                         videoLocations.add(null);
                                         videoFileNames.add(null);
                                     } else {
